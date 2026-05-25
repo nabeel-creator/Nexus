@@ -1,0 +1,3500 @@
+Question 1: The term telecommunication means communication at a ________.
+A. distance
+B. local level
+C. high speed
+D. secure layer
+ANSWER: A
+
+Question 2: Which of the following is NOT an essential component of a data communication system?
+A. Sender
+B. Receiver
+C. Message
+D. Subnet Mask
+ANSWER: D
+
+Question 3: The fundamental characteristic of data communication that refers to the variation in packet arrival time is called ________.
+A. Jitter
+B. Accuracy
+C. Timeliness
+D. Delivery
+ANSWER: A
+
+Question 4: If a data communication system changes data and fails to correct it, the system violates which characteristic?
+A. Accuracy
+B. Timeliness
+C. Delivery
+D. Jitter
+ANSWER: A
+
+Question 5: A network that is a collection of connected computing devices is called a network, while a network of networks is an ________.
+A. internet
+B. intranet
+C. extranet
+D. LAN
+ANSWER: A
+
+Question 6: Which physical topology connects each device with a dedicated point-to-point connection to a central controller?
+A. Star
+B. Bus
+C. Ring
+D. Mesh
+ANSWER: A
+
+Question 7: In a physical mesh topology, how many physical links are needed to connect n devices?
+A. n(n-1)/2
+B. n
+C. n-1
+D. 2n
+ANSWER: A
+
+Question 8: Which topology features a main line connection called a backbone where devices connect via taps?
+A. Bus
+B. Star
+C. Ring
+D. Mesh
+ANSWER: A
+
+Question 9: A significant disadvantage of the traditional Bus topology is that ________.
+A. A break in the backbone stops all transmission
+B. It requires the most cable
+C. It relies entirely on a central switch
+D. It uses point-to-point links
+ANSWER: A
+
+Question 10: In a physical Ring topology, each device incorporates which active component to boost signals?
+A. Repeater
+B. Router
+C. Passive tap
+D. Bridge
+ANSWER: A
+
+Question 11: An organizational private network that is contained strictly within the enterprise is called an ________.
+A. Intranet
+B. Internet
+C. Extranet
+D. WAN
+ANSWER: A
+
+Question 12: When an enterprise allows authorized external entities or customers to access parts of its network, this is called an ________.
+A. Extranet
+B. Intranet
+C. Internet
+D. LAN
+ANSWER: A
+
+Question 13: Which data flow mode allows transmission in both directions, but only one direction at a time?
+A. Half-Duplex
+B. Simplex
+C. Full-Duplex
+D. Unidirectional
+ANSWER: A
+
+Question 14: Television broadcasting is an example of which type of data flow mode?
+A. Simplex
+B. Half-Duplex
+C. Full-Duplex
+D. Bidirectional
+ANSWER: A
+
+Question 15: Which characteristic ensures that a data communication system delivers packets only to the intended user?
+A. Delivery
+B. Accuracy
+C. Timeliness
+D. Jitter
+ANSWER: A
+
+Question 16: The information or data to be communicated in a data communication system is called the ________.
+A. Message
+B. Protocol
+C. Medium
+D. Sender
+ANSWER: A
+
+Question 17: The physical path over which a message travels from sender to receiver is known as the ________.
+A. Transmission Medium
+B. Protocol
+C. Interface
+D. Gateway
+ANSWER: A
+
+Question 18: A set of rules that governs data communication between entities is defined as a ________.
+A. Protocol
+B. Standard
+C. Topology
+D. Medium
+ANSWER: A
+
+Question 19: Which physical topology provides the highest level of redundancy and fault isolation?
+A. Mesh
+B. Bus
+C. Star
+D. Tree
+ANSWER: A
+
+Question 20: What is a major advantage of a Star topology over a Mesh topology?
+A. It requires less cabling and is easier to install
+B. It eliminates the central point of failure
+C. It requires no active hardware
+D. It provides direct dedicated paths between all hosts
+ANSWER: A
+
+Question 21: A Personal Area Network (PAN) typically spans a maximum connectivity range of up to ________.
+A. 10 meters
+B. 100 meters
+C. 1 kilometer
+D. 10 kilometers
+ANSWER: A
+
+Question 22: Which of the following technologies is commonly used to implement a Personal Area Network (PAN)?
+A. Bluetooth
+B. Fiber Optics
+C. Metro Ethernet
+D. OSPF
+ANSWER: A
+
+Question 23: A Local Area Network (LAN) usually connects devices within which type of geographical area?
+A. A room, building, or campus
+B. An entire city
+C. A whole continent
+D. Global endpoints
+ANSWER: A
+
+Question 24: When a network operates primarily on private IP addresses and owned infrastructure, it is a ________.
+A. LAN
+B. MAN
+C. WAN
+D. Internet
+ANSWER: A
+
+Question 25: A Metropolitan Area Network (MAN) generally expands throughout what scope?
+A. A city
+B. A home office
+C. A country
+D. A continent
+ANSWER: A
+
+Question 26: Which of the following technologies is widely utilized for Metropolitan Area Network (MAN) infrastructure?
+A. Fiber optics and Metro Ethernet
+B. Bluetooth
+C. NFC
+D. Dial-up modems
+ANSWER: A
+
+Question 27: A Wide Area Network (WAN) is best characterized by which attribute?
+A. It covers a broad geographical area such as countries or continents
+B. It is limited to a 10-meter radius
+C. It never uses routers
+D. It relies entirely on private local resources
+ANSWER: A
+
+Question 28: Which networking device belongs strictly to only ONE collision domain and copies incoming signals to all ports?
+A. Hub
+B. Switch
+C. Router
+D. Bridge
+ANSWER: A
+
+Question 29: Which layer 2 device separates collision domains on every single port but maintains a single broadcast domain?
+A. Switch
+B. Hub
+C. Repeater
+D. Amplifier
+ANSWER: A
+
+Question 30: Which layer 3 device separates both collision domains and broadcast domains?
+A. Router
+B. Switch
+C. Hub
+D. Repeater
+ANSWER: A
+
+Question 31: What protocol does Ethernet use to manage shared bandwidth and handle simultaneous transmissions?
+A. CSMA/CD
+B. STP
+C. OSPF
+D. ICMP
+ANSWER: A
+
+Question 32: In CSMA/CD, what is the length of the jam signal sent to inform all devices that a collision occurred?
+A. 32 bits
+B. 64 bits
+C. 16 bits
+D. 128 bits
+ANSWER: A
+
+Question 33: What algorithm is invoked by devices on an Ethernet segment immediately after a collision occurs?
+A. Random backoff algorithm
+B. Dijkstra algorithm
+C. Spanning tree algorithm
+D. Bellman-Ford algorithm
+ANSWER: A
+
+Question 34: Why do networks utilize a layered communication architecture?
+A. To reduce complexity by splitting tasks into smaller pieces
+B. To increase propagation delay
+C. To eliminate the need for protocols
+D. To prevent the use of routers
+ANSWER: A
+
+Question 35: In a layered approach, each layer provides services to the layer immediately ________.
+A. above it
+B. below it
+C. across the router
+D. inside the hub
+ANSWER: A
+
+Question 36: A logical area where broadcast frames are received by all devices is known as a ________.
+A. Broadcast domain
+B. Collision domain
+C. Subnet mask
+D. VLAN tag
+ANSWER: A
+
+Question 37: Hubs belong to how many collision domains?
+A. One
+B. Two
+C. As many as the number of ports
+D. Zero
+ANSWER: A
+
+Question 38: If a switch has 24 ports, how many separate collision domains does it create?
+A. 24
+B. 1
+C. 12
+D. 0
+ANSWER: A
+
+Question 39: By default, how many broadcast domains does a standard unconfigured 24-port switch represent?
+A. One
+B. 24
+C. Two
+D. Zero
+ANSWER: A
+
+Question 40: What is the primary function of the jam signal in an Ethernet network running CSMA/CD?
+A. To notify all devices that a collision has occurred
+B. To clear the MAC table
+C. To route packets to the next hop
+D. To renew the DHCP lease
+ANSWER: A
+
+Question 41: The Open Systems Interconnection (OSI) model was created by which international body?
+A. ISO
+B. IEEE
+C. IETF
+D. DoD
+ANSWER: A
+
+Question 42: The OSI model consists of how many distinct layers?
+A. 7
+B. 4
+C. 5
+D. 6
+ANSWER: A
+
+Question 43: Which layers of the OSI model are known as the Upper Layers or User Support Layers?
+A. Application, Presentation, Session
+B. Transport, Network, Data-Link
+C. Network, Data-Link, Physical
+D. Physical, Data-Link, Transport
+ANSWER: A
+
+Question 44: The Upper Layers of the OSI model are primarily implemented in ________.
+A. Software
+B. Hardware
+C. Firmware
+D. Cabling
+ANSWER: A
+
+Question 45: Which OSI layer provides the direct interface between the user application and the network?
+A. Application Layer
+B. Presentation Layer
+C. Session Layer
+D. Transport Layer
+ANSWER: A
+
+Question 46: HTTP, FTP, and SMTP are protocols that operate at which layer of the OSI model?
+A. Application Layer
+B. Presentation Layer
+C. Transport Layer
+D. Network Layer
+ANSWER: A
+
+Question 47: Which OSI layer is responsible for data translation, formatting, encryption, and compression?
+A. Presentation Layer
+B. Session Layer
+C. Application Layer
+D. Transport Layer
+ANSWER: A
+
+Question 48: HTML, XML, GIF, and JPEG are standards associated with which layer of the OSI model?
+A. Presentation Layer
+B. Application Layer
+C. Session Layer
+D. Network Layer
+ANSWER: A
+
+Question 49: Which OSI layer is responsible for establishing, maintaining, and terminating synchronization sessions between devices?
+A. Session Layer
+B. Transport Layer
+C. Presentation Layer
+D. Network Layer
+ANSWER: A
+
+Question 50: The Department of Defense (DoD) model is also commonly known as the ________.
+A. TCP/IP Model
+B. OSI Model
+C. ISO Model
+D. IEEE Model
+ANSWER: A
+
+Question 51: The classic DoD or original TCP/IP model consists of how many layers?
+A. 4
+B. 7
+C. 5
+D. 3
+ANSWER: A
+
+Question 52: Which layer of the OSI model is responsible for end-to-end connection control, flow control, and error recovery?
+A. Transport Layer
+B. Network Layer
+C. Data-Link Layer
+D. Physical Layer
+ANSWER: A
+
+Question 53: What are the two primary protocols operating at the Transport layer of the TCP/IP suite?
+A. TCP and UDP
+B. IP and ICMP
+C. HTTP and FTP
+D. ARP and RARP
+ANSWER: A
+
+Question 54: Which OSI layer is responsible for determining the best logical path to route data across networks?
+A. Network Layer
+B. Data-Link Layer
+C. Physical Layer
+D. Transport Layer
+ANSWER: A
+
+Question 55: IP and ICMP operate at which layer of the OSI reference model?
+A. Network Layer
+B. Transport Layer
+C. Data-Link Layer
+D. Physical Layer
+ANSWER: A
+
+Question 56: As packets travel across networks, logical IP addresses are translated to hardware MAC addresses at which layer?
+A. Data-Link Layer
+B. Network Layer
+C. Physical Layer
+D. Transport Layer
+ANSWER: A
+
+Question 57: The Physical layer handles data transfer across the network medium in the form of raw ________.
+A. bits
+B. packets
+C. frames
+D. segments
+ANSWER: A
+
+Question 58: What is a 16-bit address used to identify specific processes or applications running on a host?
+A. Port address
+B. IP address
+C. MAC address
+D. Hardware address
+ANSWER: A
+
+Question 59: In the mnemonic 'Please Do Not Throw Sausage Pizza Away', the letter 'P' stands for which layer?
+A. Physical
+B. Presentation
+C. Protocol
+D. Port
+ANSWER: A
+
+Question 60: Which type of address changes from hop to hop as a packet traverses intermediate routers?
+A. Physical Address
+B. Logical Address
+C. Port Address
+D. Email Address
+ANSWER: A
+
+Question 61: How many bits long is an IPv4 address?
+A. 32 bits
+B. 64 bits
+C. 128 bits
+D. 16 bits
+ANSWER: A
+
+Question 62: The total number of addresses available in an address space defined by b bits is equal to ________.
+A. 2^b
+B. 2*b
+C. b^2
+D. 16^b
+ANSWER: A
+
+Question 63: Which notation represents an IPv4 address by separating four decimal integers with dots?
+A. Dotted-decimal notation
+B. Hexadecimal notation
+C. Binary notation
+D. Octal notation
+ANSWER: A
+
+Question 64: What is the first byte range for a Class A IP address in classful routing?
+A. 0 to 127
+B. 128 to 191
+C. 192 to 223
+D. 224 to 239
+ANSWER: A
+
+Question 65: What is the first byte range for a Class B IP address?
+A. 128 to 191
+B. 0 to 127
+C. 192 to 223
+D. 224 to 239
+ANSWER: A
+
+Question 66: What is the first byte range for a Class C IP address?
+A. 192 to 223
+B. 128 to 191
+C. 0 to 127
+D. 224 to 239
+ANSWER: A
+
+Question 67: Which IP address class is specifically reserved for multicast addressing?
+A. Class D
+B. Class C
+C. Class B
+D. Class E
+ANSWER: A
+
+Question 68: What is the default subnet mask for a Class A network address?
+A. 255.0.0.0
+B. 255.255.0.0
+C. 255.255.255.0
+D. 255.255.255.255
+ANSWER: A
+
+Question 69: What is the default subnet mask for a Class B network address?
+A. 255.255.0.0
+B. 255.0.0.0
+C. 255.255.255.0
+D. 255.255.255.255
+ANSWER: A
+
+Question 70: What is the default subnet mask for a Class C network address?
+A. 255.255.255.0
+B. 255.255.0.0
+C. 255.0.0.0
+D. 255.255.255.255
+ANSWER: A
+
+Question 71: The first address of an IP block is reserved and utilized as the ________.
+A. Network Address
+B. Broadcast Address
+C. Host Address
+D. Gateway Address
+ANSWER: A
+
+Question 72: What technique allows an administrator to divide a single classful network into smaller, fixed-size logical segments?
+A. Subnetting
+B. Supernetting
+C. VLSM
+D. Anycasting
+ANSWER: A
+
+Question 73: What does the acronym CIDR stand for in modern IP routing?
+A. Classless Inter-Domain Routing
+B. Classful Internet Data Relay
+C. Computer Internet Network Domain
+D. Core Internetwork Direct Router
+ANSWER: A
+
+Question 74: What does VLSM stand for?
+A. Variable Length Subnet Masking
+B. Virtual Local Subnet Management
+C. Vector Length Subnet Matrix
+D. Variable Logical Subnet Masking
+ANSWER: A
+
+Question 75: Why would an organization or ISP implement Variable Length Subnet Masking (VLSM)?
+A. To allow subnets of different sizes and minimize address wastage
+B. To completely eliminate the network layer
+C. To force all networks to use Class A addresses
+D. To convert IPv4 into IPv6 automatically
+ANSWER: A
+
+Question 76: What is the process of combining multiple contiguous networks into a single larger network block called?
+A. Supernetting
+B. Subnetting
+C. VLSM
+D. Fragmentation
+ANSWER: A
+
+Question 77: In classless addressing, the slash notation (e.g., /24) represents the number of bits in the ________.
+A. Prefix length
+B. Host identifier
+C. MAC address
+D. Port number
+ANSWER: A
+
+Question 78: Given a network address of 192.168.1.0/24, how many total host addresses can exist in this block?
+A. 256
+B. 512
+C. 128
+D. 64
+ANSWER: A
+
+Question 79: How many USABLE host addresses are available in a standard /24 subnet block?
+A. 254
+B. 256
+C. 255
+D. 252
+ANSWER: A
+
+Question 80: What is the default prefix length for a standard Class B network block?
+A. /16
+B. /8
+C. /24
+D. /32
+ANSWER: A
+
+Question 81: How many bits long is an IPv6 address?
+A. 128 bits
+B. 32 bits
+C. 64 bits
+D. 256 bits
+ANSWER: A
+
+Question 82: IPv6 addresses are written using which notation system?
+A. Hexadecimal notation separated by colons
+B. Dotted-decimal notation
+C. Binary digits separated by slashes
+D. Octal integers
+ANSWER: A
+
+Question 83: How many fields or groupings of hexadecimal digits make up a full IPv6 address?
+A. 8 fields
+B. 4 fields
+C. 16 fields
+D. 6 fields
+ANSWER: A
+
+Question 84: Each field or grouping in an IPv6 address consists of how many bits?
+A. 16 bits
+B. 32 bits
+C. 8 bits
+D. 4 bits
+ANSWER: A
+
+Question 85: Which feature of IPv6 allows hosts to auto-configure their own addresses using router advertisements?
+A. Stateless Address Autoconfiguration (SLAAC)
+B. DHCP lease backup
+C. CSMA/CD monitoring
+D. STP converging
+ANSWER: A
+
+Question 86: Security is integrated natively into the IPv6 network header through built-in support for ________.
+A. IPsec
+B. WPA3
+C. NAT Overload
+D. Proxy ARP
+ANSWER: A
+
+Question 87: The IPv6 loopback or localhost address is represented in its compressed form as ________.
+A. ::1
+B. 127.0.0.1
+C. FE80::1
+D. FF02::1
+ANSWER: A
+
+Question 88: IPv6 Link-Local addresses are restricted to a single link and always begin with the prefix ________.
+A. FE80::/10
+B. FEC0::/10
+C. 2000::/3
+D. FF00::/8
+ANSWER: A
+
+Question 89: Which type of IPv6 address is equivalent to the 'private' IPv4 address spaces and begins with FECx?
+A. Site-Local Address
+B. Link-Local Address
+C. Aggregate Global Address
+D. Multicast Address
+ANSWER: A
+
+Question 90: Which type of IPv6 address is equivalent to a 'public' IPv4 address and typically begins with 2xxx or 3xxx?
+A. Aggregate Global Address
+B. Link-Local Address
+C. Site-Local Address
+D. Loopback Address
+ANSWER: A
+
+Question 91: IPv6 Multicast addresses always begin with which specific hexadecimal prefix?
+A. FFxx:
+B. FE8x:
+C. FECx:
+D. 3xxx:
+ANSWER: A
+
+Question 92: What type of address identifies a group of interfaces on multiple hosts where a packet is delivered to the nearest interface?
+A. Anycast Address
+B. Multicast Address
+C. Unicast Address
+D. Broadcast Address
+ANSWER: A
+
+Question 93: Which of the following communication types has been completely removed from IPv6?
+A. Broadcast
+B. Multicast
+C. Unicast
+D. Anycast
+ANSWER: A
+
+Question 94: What does the EUI-64 format expand or configure?
+A. A 48-bit MAC address into a 64-bit interface ID
+B. An IPv4 address into an IPv6 address
+C. A port number into a socket link
+D. A standard subnet mask into a prefix length
+ANSWER: A
+
+Question 95: How many hexadecimal characters are contained within each field of a standard IPv6 address?
+A. 4
+B. 2
+C. 8
+D. 6
+ANSWER: A
+
+Question 96: If an IPv6 field contains '0000', it can be compressed or written as a single ________.
+A. 0
+B. X
+C. ::
+D. 1
+ANSWER: A
+
+Question 97: The double colon (::) compression operator in an IPv6 address can be used how many times in a single address?
+A. Only once
+B. Twice
+C. As many times as needed
+D. Up to four times
+ANSWER: A
+
+Question 98: What is the primary driver behind the global transition from IPv4 to IPv6?
+A. Exhaustion of the IPv4 address space
+B. To speed up the CSMA/CD backoff algorithm
+C. To eliminate the use of switches
+D. To increase the size of a MAC address
+ANSWER: A
+
+Question 99: What is the length of the interface identifier portion of a standard global unicast IPv6 address?
+A. 64 bits
+B. 32 bits
+C. 48 bits
+D. 128 bits
+ANSWER: A
+
+Question 100: In an IPv6 environment, which mechanism allows for backwards compatibility and co-existence with older IPv4 hosts?
+A. Dual-stack or tunneling mechanisms
+B. STP fallback loops
+C. NAT overloading only
+D. CSMA/CD scaling
+ANSWER: A
+
+Question 101: What is the primary function of the Address Resolution Protocol (ARP)?
+A. To map a known logical IP address to a physical MAC address
+B. To resolve domain names to IP addresses
+C. To assign dynamic IP addresses to clients
+D. To calculate the shortest path to a network
+ANSWER: A
+
+Question 102: Where does an end station store recently learned IP-to-MAC address mappings to avoid repetitive broadcasts?
+A. ARP cache table
+B. Routing table
+C. DNS zone file
+D. MAC address table of the switch
+ANSWER: A
+
+Question 103: An ARP request frame is sent out onto the local network segment as a ________.
+A. Broadcast
+B. Unicast
+C. Anycast
+D. Multicast
+ANSWER: A
+
+Question 104: An ARP reply message is sent back to the original requestor as a ________.
+A. Unicast
+B. Broadcast
+C. Multicast
+D. Anycast
+ANSWER: A
+
+Question 105: What type of ARP setup allows a router to answer ARP requests on behalf of a remote destination host?
+A. Proxy ARP
+B. Gratuitous ARP
+C. Reverse ARP
+D. Inverse ARP
+ANSWER: A
+
+Question 106: Which protocol was traditionally used by diskless workstations to discover their IP address given their MAC address?
+A. RARP
+B. ARP
+C. DHCP request
+D. ICMP query
+ANSWER: A
+
+Question 107: What type of special ARP packet is generated spontaneously by a host when its interface link goes up?
+A. Gratuitous ARP (GARP)
+B. Proxy ARP
+C. Inverse ARP
+D. Reverse ARP
+ANSWER: A
+
+Question 108: Gratuitous ARP (GARP) is exceptionally valuable for which network troubleshooting task?
+A. Discovering and detecting duplicate IP address conflicts
+B. Building a comprehensive routing table
+C. Updating DNS forward lookup zones
+D. Renewing a local DHCP server lease
+ANSWER: A
+
+Question 109: Which Layer 2 protocol uses Inverse ARP to associate a Data Link Connection Identifier (DLCI) with an IP address?
+A. Frame Relay
+B. Ethernet
+C. Token Ring
+D. PPP
+ANSWER: A
+
+Question 110: What does the acronym ICMP stand for?
+A. Internet Control Message Protocol
+B. Internal Cluster Management Protocol
+C. Inter-network Connection Message Protocol
+D. Integrated Circuit Message Protocol
+ANSWER: A
+
+Question 111: What is the central purpose of the ICMP protocol in an IP network environment?
+A. To provide feedback and report errors about communication problems
+B. To encrypt user payload data
+C. To maintain the Spanning Tree topology
+D. To allocate dynamic logical ports
+ANSWER: A
+
+Question 112: Which popular diagnostic utility utilizes ICMP Echo Request and Echo Reply messages?
+A. Ping
+B. Nslookup
+C. Ipconfig
+D. Arp -a
+ANSWER: A
+
+Question 113: Which diagnostic tool utilizes an increasing Time-to-Live (TTL) field to map out each hop along a path?
+A. Traceroute / Tracert
+B. Ping
+C. Netstat
+D. Ipconfig /renew
+ANSWER: A
+
+Question 114: What two metrics are commonly monitored and displayed by a successful execution of the Ping tool?
+A. Round Trip Time (RTT) and Time to Live (TTL)
+B. MAC address and port number
+C. Subnet mask and domain name
+D. Bandwidth and CPU utilization
+ANSWER: A
+
+Question 115: In the Ping command, what does the switch '-t' execute on a standard Windows CLI console?
+A. Pings the specified host continuously until interrupted
+B. Resolves addresses to hostnames
+C. Sets the exact size of the echo packet
+D. Changes the default TTL value
+ANSWER: A
+
+Question 116: What action will a receiving router take if the TTL value in an IP packet header decrements to zero?
+A. Discard the packet and send an ICMP Time Exceeded message to the source
+B. Forward the packet using a backup default static route
+C. Broadcast the packet across all local interfaces
+D. Silently store the packet inside its active volatile RAM buffer
+ANSWER: A
+
+Question 117: ICMP messages are encapsulated directly inside the payload field of which protocol?
+A. IP
+B. TCP
+C. UDP
+D. Ethernet
+ANSWER: A
+
+Question 118: Which ICMP message type notifies a sending station that a specific network or host is currently unreachable?
+A. Destination Unreachable
+B. Source Quench
+C. Time Exceeded
+D. Echo Reply
+ANSWER: A
+
+Question 119: An ARP request frame uses which destination physical MAC address?
+A. FF-FF-FF-FF-FF-FF
+B. 00-00-00-00-00-00
+C. 127.0.0.1
+D. 255.255.255.255
+ANSWER: A
+
+Question 120: The 'arp -a' command executed at a command prompt displays what information?
+A. The current contents of the local ARP cache table
+B. The active routing table entries
+C. The configured DNS resolver addresses
+D. The DHCP lease expiration details
+ANSWER: A
+
+Question 121: What does the acronym DNS stand for?
+A. Domain Name System
+B. Dynamic Network Service
+C. Distributed Node Server
+D. Data Network Standard
+ANSWER: A
+
+Question 122: DNS is frequently referred to as the 'phone book' of the Internet because it translates ________.
+A. Domain names into IP addresses
+B. MAC addresses into IP addresses
+C. Port numbers into application names
+D. Private IP addresses into public IP addresses
+ANSWER: A
+
+Question 123: If a user wants to bypass DNS and visit a website directly via IPv4, they must enter its ________.
+A. IP address
+B. MAC address
+C. Port number
+D. Subnet mask
+ANSWER: A
+
+Question 124: What type of DNS zone map is specifically responsible for mapping a domain name to an IP address?
+A. Forward Lookup Zone
+B. Reverse Lookup Zone
+C. Stub Zone
+D. Root Zone
+ANSWER: A
+
+Question 125: What does the acronym DHCP stand for in network management?
+A. Dynamic Host Configuration Protocol
+B. Domain Host Connection Protocol
+C. Distributed Hub Control Protocol
+D. Dynamic Network Configuration Protocol
+ANSWER: A
+
+Question 126: What is the primary objective of implementing a DHCP server on a network?
+A. To automatically assign IP addresses and network settings to client hosts
+B. To prevent unauthorized access using wildcard masks
+C. To block loops in standard redundant switch structures
+D. To route packets across multiple WAN boundaries
+ANSWER: A
+
+Question 127: The standard four-step operational sequence of a DHCP transaction is represented by the acronym ________.
+A. DORA
+B. ARPA
+C. OSPF
+D. SLAAC
+ANSWER: A
+
+Question 128: What does the 'D' in the DHCP DORA process stand for?
+A. Discover
+B. Direct
+C. Disconnect
+D. Domain
+ANSWER: A
+
+Question 129: What does the 'O' in the DHCP DORA process stand for?
+A. Offer
+B. Open
+C. Output
+D. Overload
+ANSWER: A
+
+Question 130: What does the 'R' in the DHCP DORA process stand for?
+A. Request
+B. Release
+C. Renew
+D. Resolve
+ANSWER: A
+
+Question 131: What does the 'A' in the DHCP DORA process stand for?
+A. Acknowledgement
+B. Address
+C. Allocation
+D. Anycast
+ANSWER: A
+
+Question 132: The initial DHCPDISCOVER message is sent out by a client workstation as a ________.
+A. Broadcast
+B. Unicast
+C. Multicast
+D. Anycast
+ANSWER: A
+
+Question 133: By default, what is the standard duration of an IP address lease period assigned by a DHCP server?
+A. 8 days
+B. 24 hours
+C. 30 days
+D. 1 hour
+ANSWER: A
+
+Question 134: At what percentage of lease duration expiration does a DHCP client first attempt to renew its lease?
+A. 50%
+B. 87.5%
+C. 100%
+D. 25%
+ANSWER: A
+
+Question 135: If a Windows client cannot reach a DHCP server, it may auto-assign a private link IP from which range?
+A. 169.254.0.0 to 169.254.255.255
+B. 127.0.0.0 to 127.255.255.255
+C. 192.168.1.0 to 192.168.1.255
+D. 0.0.0.0
+ANSWER: A
+
+Question 136: Which command line utility releases an active dynamic IP address allocation back to the DHCP pool?
+A. ipconfig /release
+B. ipconfig /renew
+C. ipconfig /all
+D. nslookup
+ANSWER: A
+
+Question 137: Which command line utility requests a brand new or renewed IP address lease allocation from a DHCP server?
+A. ipconfig /renew
+B. ipconfig /release
+C. ipconfig /all
+D. ping
+ANSWER: A
+
+Question 138: The 'ipconfig /all' command is highly useful because it displays what explicit information?
+A. Detailed IP configuration, MAC addresses, and DNS server settings
+B. The complete local routing table
+C. The active Spanning Tree root bridge port metrics
+D. The running dynamic routing protocol updates
+ANSWER: A
+
+Question 139: A DHCPOFFER message is dispatched from the server back to the client as a ________.
+A. Unicast or Broadcast depending on implementation
+B. Multicast always
+C. Anycast always
+D. Loopback packet
+ANSWER: A
+
+Question 140: A DHCPREQUEST message contains a source IP address of what value since the client is not yet finalized?
+A. 0.0.0.0
+B. 255.255.255.255
+C. 127.0.0.1
+D. 169.254.1.1
+ANSWER: A
+
+Question 141: What is the core purpose of the Spanning Tree Protocol (STP) in a switched network?
+A. To prevent Layer 2 loops on redundant switched topologies
+B. To route packets between separate IP subnets
+C. To translate domain names to MAC addresses
+D. To filter traffic using port-based access control lists
+ANSWER: A
+
+Question 142: STP was originally codified and standardized under which specific IEEE working group specification?
+A. IEEE 802.1D
+B. IEEE 802.3
+C. IEEE 802.11
+D. IEEE 802.1X
+ANSWER: A
+
+Question 143: Which malicious condition occurs when redundant unblocked switch loops allow frames to multiply endlessly?
+A. Broadcast storm
+B. MAC address flapping
+C. IP address depletion
+D. Route poisoning
+ANSWER: A
+
+Question 144: What issue occurs when a switch receives identical frames on different ports, corrupting its CAM table?
+A. MAC Address Flapping or Instability
+B. Routing loop
+C. DHCP lease expiration
+D. ICMP destination unreachable
+ANSWER: A
+
+Question 145: What is the specialized frame structure exchanged between switches running STP to maintain topology maps?
+A. Bridge Protocol Data Unit (BPDU)
+B. Internet Control Message Packet
+C. DORA discovery frame
+D. Wildcard sequence frame
+ANSWER: A
+
+Question 146: What is the first critical step in the STP logical convergence sequence?
+A. Electing a single Root Bridge for the network
+B. Identifying all blocked ports
+C. Calculating the administrative distance
+D. Configuring a NAT address pool
+ANSWER: A
+
+Question 147: The criteria for electing an STP Root Bridge relies on selecting the switch with the lowest ________.
+A. Bridge ID (BID)
+B. MAC address only
+C. Priority value only
+D. Root Path Cost
+ANSWER: A
+
+Question 148: A standard Bridge ID (BID) inside an STP configuration frame is composed of which two primary values?
+A. Bridge Priority and the switch MAC address
+B. IP address and port number
+C. Subnet mask and interface prefix
+D. VLAN ID and autonomous system number
+ANSWER: A
+
+Question 149: What is the default bridge priority value pre-configured on all standard industry switches running STP?
+A. 32,768
+B. 100
+C. 1
+D. 65,535
+ANSWER: A
+
+Question 150: The port on an individual non-root switch that presents the absolute lowest cumulative path cost to the Root Bridge is the ________.
+A. Root Port
+B. Designated Port
+C. Blocking Port
+D. Disabled Port
+ANSWER: A
+
+Question 151: How many Root Ports can be actively elected on a single operational non-root switch?
+A. One
+B. Two
+C. As many as the active connections
+D. Zero
+ANSWER: A
+
+Question 152: How many Root Ports exist on the officially elected Root Bridge switch itself?
+A. Zero
+B. One
+C. Two
+D. All ports are root ports
+ANSWER: A
+
+Question 153: A single port designated per individual network segment that forwards frames with the lowest path cost to the root is the ________.
+A. Designated Port
+B. Root Port
+C. Alternate Port
+D. Loop Port
+ANSWER: A
+
+Question 154: Ports on an active Root Bridge switch are always placed into which specific STP functional role?
+A. Designated Ports
+B. Root Ports
+C. Blocking Ports
+D. Alternate Ports
+ANSWER: A
+
+Question 155: What type of BPDU is generated by a local switch to signal that a physical interface link has gone up or down?
+A. Topology Change Notification (TCN) BPDU
+B. Configuration BPDU
+C. Dynamic ARP Request
+D. ICMP redirect packet
+ANSWER: A
+
+Question 156: In which STP state does an interface only process incoming BPDUs while strictly refusing to forward user data frames?
+A. Blocking
+B. Forwarding
+C. Listening
+D. Learning
+ANSWER: A
+
+Question 157: In which STP state does a switch port actively analyze incoming data frames to build its MAC table without forwarding them yet?
+A. Learning
+B. Listening
+C. Blocking
+D. Disabled
+ANSWER: A
+
+Question 158: Which STP port state allows the interface to freely send and receive BPDUs, populate the MAC table, and forward user traffic?
+A. Forwarding
+B. Learning
+C. Listening
+D. Blocking
+ANSWER: A
+
+Question 159: What metric defines the cumulative path cost to the Root Bridge based heavily on individual link bandwidth factors?
+A. Root Path Cost
+B. Administrative Distance
+C. Hop Count
+D. Wildcard metric
+ANSWER: A
+
+Question 160: If a failed root bridge with a superior low BID comes back online, what does STP execute?
+A. It re-converges and elects the recovered switch as the Root Bridge again
+B. It permanently ignores the recovered switch
+C. It triggers an immediate broadcast storm
+D. It disables all ports on the entire network
+ANSWER: A
+
+Question 161: What is the definitive operational concept of Layer 3 IP routing?
+A. Sending a packet of information from one network to another network
+B. Switching frames based on target hardware MAC entries
+C. Assigning dynamic IP details inside a local area broadcast domain
+D. Preventing data loops using active BPDU metrics
+ANSWER: A
+
+Question 162: IP routing table match decisions are fundamentally executed based upon the target host's ________.
+A. Destination network address
+B. Source MAC address
+C. Logical port designation
+D. Active gateway preference
+ANSWER: A
+
+Question 163: A protocol that defines logical structures and carries user payload data across networks is known as a ________.
+A. Routed protocol (e.g., IP)
+B. Routing protocol (e.g., OSPF)
+C. Spanning tree standard
+D. Link-state table
+ANSWER: A
+
+Question 164: A protocol that dynamically discovers networks and constructs local interface routing tables is a ________.
+A. Routing protocol (e.g., RIP, OSPF)
+B. Routed protocol (e.g., IP)
+C. Data link layer standard
+D. Transport framework
+ANSWER: A
+
+Question 165: To determine the ultimate best route to a target destination, a router evaluates three elements in what exact order?
+A. Prefix-Length, Metric, Administrative Distance
+B. Administrative Distance, Metric, Prefix-Length
+C. Metric, Prefix-Length, Administrative Distance
+D. MAC address, IP address, Port number
+ANSWER: A
+
+Question 166: A longer prefix-length (e.g., /28 vs /24) indicates what attribute inside a router's decision engine?
+A. A more specific and preferred route match
+B. An invalid classful network block
+C. A slower routing convergence path
+D. A higher administrative distance rating
+ANSWER: A
+
+Question 167: What metric defines the relative trustworthiness of a routing protocol source compared to alternative options?
+A. Administrative Distance (AD)
+B. Hop Count metric
+C. Bandwidth cost formula
+D. Prefix suffix configuration
+ANSWER: A
+
+Question 168: What is the pre-defined Administrative Distance of a directly connected local network interface?
+A. 0
+B. 1
+C. 90
+D. 110
+ANSWER: A
+
+Question 169: What is the default Administrative Distance assigned to a manually configured static route?
+A. 1
+B. 0
+C. 120
+D. 100
+ANSWER: A
+
+Question 170: What type of route is explicitly designated as the path of last resort for packets with no specific match in the routing table?
+A. Default static route (0.0.0.0/0)
+B. Loopback interface route
+C. Classful network block
+D. Dynamic OSPF area link
+ANSWER: A
+
+Question 171: The Routing Information Protocol (RIP) is categorized under which class of routing algorithms?
+A. Distance Vector
+B. Link-State
+C. Path Vector
+D. Hybrid Matrix
+ANSWER: A
+
+Question 172: What metric does the Routing Information Protocol (RIP) utilize to determine the best path to a network?
+A. Hop count
+B. Bandwidth cost
+C. Delay and jitter calculations
+D. Reliability metrics
+ANSWER: A
+
+Question 173: What is the maximum allowable hop count limit supported by the Routing Information Protocol (RIP)?
+A. 15 hops
+B. 100 hops
+C. 255 hops
+D. Unlimited
+ANSWER: A
+
+Question 174: What occurs to an active IP packet inside a RIP routing environment if its hop count reaches a value of 16?
+A. It is marked as unreachable and discarded
+B. It is forwarded via a fast default static route
+C. It triggers an immediate topology change notification
+D. It loops infinitely through active switches
+ANSWER: A
+
+Question 175: What type of routing protocol is the Open Shortest Path First (OSPF) protocol?
+A. Link-State routing protocol
+B. Distance Vector protocol
+C. Classful distance protocol
+D. Static path algorithm
+ANSWER: A
+
+Question 176: To scale efficiently to large, enterprise-grade networks, OSPF splits its architecture using logical ________.
+A. Areas
+B. Subnets
+C. VLANs
+D. Bridge loops
+ANSWER: A
+
+Question 177: OSPF routers exchange direct link updates and operational status parameters through specialized ________.
+A. Link-State Advertisements (LSAs)
+B. Distance Vector update packets
+C. BPDU topology maps
+D. DHCP discover frames
+ANSWER: A
+
+Question 178: What mathematical algorithm does OSPF run to calculate the absolute shortest path tree to destination blocks?
+A. Dijkstra algorithm
+B. Random backoff algorithm
+C. Bellman-Ford algorithm
+D. Spanning tree loop check
+ANSWER: A
+
+Question 179: What metric does OSPF implement to determine path efficiency, and how is it derived?
+A. Cost, calculated based upon link bandwidth parameters
+B. Hop count up to a limit of 15
+C. Administrative distance scaling
+D. Wildcard mask ranges
+ANSWER: A
+
+Question 180: What is the standard pre-configured Administrative Distance of an OSPF dynamic routing source?
+A. 110
+B. 120
+C. 90
+D. 100
+ANSWER: A
+
+Question 181: What does the acronym NAT stand for?
+A. Network Address Translation
+B. Network Access Timing
+C. Node Allocation Table
+D. Dynamic Address Tracking
+ANSWER: A
+
+Question 182: What is the primary function of Network Address Translation (NAT) inside a gateway router?
+A. Converting between private IP addresses and public IP addresses
+B. Preventing loops on dynamic switch ports
+C. Resolving domain strings to target MAC destinations
+D. Applying standard wildcard filters to source traffic
+ANSWER: A
+
+Question 183: Which of the following IP blocks is explicitly reserved for Class A private networks?
+A. 10.0.0.0 to 10.255.255.255
+B. 172.16.0.0 to 172.31.255.255
+C. 192.168.0.0 to 192.168.255.255
+D. 169.254.0.0 to 169.254.255.255
+ANSWER: A
+
+Question 184: Which IP range is explicitly reserved for Class B private organizational network spaces?
+A. 172.16.0.0 to 172.31.255.255
+B. 10.0.0.0 to 10.255.255.255
+C. 192.168.0.0 to 192.168.255.255
+D. 127.0.0.0 to 127.255.255.255
+ANSWER: A
+
+Question 185: Which IP range is explicitly reserved for Class C private local network blocks?
+A. 192.168.0.0 to 192.168.255.255
+B. 10.0.0.0 to 10.255.255.255
+C. 172.16.0.0 to 172.31.255.255
+D. 224.0.0.0 to 239.255.255.255
+ANSWER: A
+
+Question 186: What is a defining attribute of a public IP address space compared to a private block?
+A. Public addresses are globally unique and routable over the Internet
+B. Public addresses can only be used on local LAN segments
+C. Public addresses are generated by the CSMA/CD loop protocol
+D. Public addresses are restricted to 48 bits in length
+ANSWER: A
+
+Question 187: What form of NAT provides a strict, permanent one-to-one mapping between a local private IP and a public global IP?
+A. Static NAT
+B. Dynamic NAT
+C. PAT or Overloading
+D. Proxy Address Translation
+ANSWER: A
+
+Question 188: What form of NAT maps an unregistered internal private IP address to an available public IP selected from a pool?
+A. Dynamic NAT
+B. Static NAT
+C. NAT Overload
+D. Port Forwarding
+ANSWER: A
+
+Question 189: What type of NAT mapping is also known as Port Address Translation (PAT) or Overloading?
+A. Many-to-one mapping using unique tracking port entries
+B. One-to-one static allocation
+C. Classful mask conversion
+D. Anycast public interface pairing
+ANSWER: A
+
+Question 190: Why is NAT Overload (PAT) the most popular and widely deployed form of address translation?
+A. It allows thousands of internal hosts to share a single public IP simultaneously
+B. It completely removes the need for an internal routing table
+C. It automatically switches local connections into IPv6 nodes
+D. It functions without using any Layer 4 port descriptors
+ANSWER: A
+
+Question 191: In Cisco NAT terminology, what is the designation of a local host's private IP address before translation occurs?
+A. Inside Local Address
+B. Inside Global Address
+C. Outside Local Address
+D. Outside Global Address
+ANSWER: A
+
+Question 192: In Cisco NAT terminology, what is the post-translation public IP address of an internal host on the internet?
+A. Inside Global Address
+B. Inside Local Address
+C. Outside Local Address
+D. Outside Global Address
+ANSWER: A
+
+Question 193: What configuration command designates a physical interface as the internal boundary for NAT translation?
+A. ip nat inside
+B. ip nat outside
+C. ip nat pool
+D. ip nat overload
+ANSWER: A
+
+Question 194: What configuration command designates an interface as the external public internet boundary for NAT processing?
+A. ip nat outside
+B. ip nat inside
+C. ip nat pool
+D. access-list permit
+ANSWER: A
+
+Question 195: What keyword appended to a Cisco NAT source command enables Port Address Translation (PAT)?
+A. overload
+B. dynamic
+C. static
+D. pool
+ANSWER: A
+
+Question 196: A NAT table entry contains translations mapping internal network elements to external destinations using ________.
+A. IP addresses and port numbers
+B. MAC addresses and switch priority values
+C. Wildcard masks and area identifiers
+D. Hop counts and bridge IDs
+ANSWER: A
+
+Question 197: What is a major advantage of implementing NAT inside an enterprise network edge?
+A. It conserves public IPv4 addresses and enhances internal network obfuscation
+B. It eliminates processing overhead on the perimeter gateway router
+C. It speeds up the local Spanning Tree protocol convergence
+D. It allows uninhibited end-to-end trace auditing across all hops
+ANSWER: A
+
+Question 198: What is a potential disadvantage of utilizing Network Address Translation?
+A. It causes packet processing delays and disrupts certain applications requiring true end-to-end visibility
+B. It increases public address lease cost exponentially
+C. It completely disables the use of dynamic static routing
+D. It restricts local network hosts to using only Simplex transmission mode
+ANSWER: A
+
+Question 199: The command 'ip nat pool MY_POOL 200.1.1.1 200.1.1.10 netmask 255.255.255.0' achieves what exact task?
+A. Defines a pool of valid public IP addresses for address translation
+B. Permits internal private hosts to bypass the local firewall configuration
+C. Establishes a static one-to-one route for target web servers
+D. Binds an access control list to a specific WAN link interface
+ANSWER: A
+
+Question 200: Which layer of the OSI model does Port Address Translation (PAT) heavily interact with to distinguish host sessions?
+A. Transport Layer (Layer 4)
+B. Data-Link Layer (Layer 2)
+C. Physical Layer (Layer 1)
+D. Session Layer (Layer 5)
+ANSWER: A
+
+Question 201: What are Access Control Lists (ACLs) fundamentally used for inside network routers?
+A. Filtering traffic by permitting or denying packets based on explicit conditions
+B. Configuring public dynamic IP address translation blocks
+C. Resolving domain names to destination hardware coordinates
+D. Eliminating Layer 2 switching loop configurations
+ANSWER: A
+
+Question 202: A router executing packet filtering inspects and analyzes packets to make drop or forward choices based on ________.
+A. Source IP, destination IP, protocol type, or port parameters
+B. Bridge ID priority values and cumulative root costs
+C. The active local DHCP lease duration timestamp
+D. The current switch MAC table entry index
+ANSWER: A
+
+Question 203: An individual condition statement inside an Access Control List is technically referred to as an ________.
+A. Access Control Entry (ACE)
+B. Access Mask entry
+C. Active Filtering Clause
+D. Administrative Route entry
+ANSWER: A
+
+Question 204: How does a router evaluate a packet against an active Access Control List?
+A. Sequentially from the top statement down, stopping at the first match
+B. Randomly sampling statements until a permit is encountered
+C. Analyzing the bottom statement first and working upwards
+D. Evaluating all matching entries and averaging their metrics
+ANSWER: A
+
+Question 205: What invisible, implicit statement resides at the very bottom of every standard Access Control List?
+A. Implicit deny all traffic statement
+B. Implicit permit all traffic statement
+C. Implicit log and forward instruction
+D. Implicit NAT redirect command
+ANSWER: A
+
+Question 206: If a packet does not match any explicitly configured statement inside an ACL, what is its fate?
+A. It is implicitly denied and dropped by the router
+B. It is forwarded out of every active interface link
+C. It is redirected automatically to the local DHCP server
+D. It is assigned an arbitrary loopback port address
+ANSWER: A
+
+Question 207: What specialized mask type do Access Control Lists implement to determine which address bits to examine or ignore?
+A. Wildcard mask
+B. Subnet mask
+C. Prefix mask
+D. Anycast mask
+ANSWER: A
+
+Question 208: In an ACL wildcard mask, a binary bit value of 0 explicitly signifies what instruction to the router?
+A. Match the corresponding bit value exactly
+B. Ignore the corresponding bit value completely
+C. Invert the bit value before evaluation
+D. Forward the bit value via the OSPF area
+ANSWER: A
+
+Question 209: In an ACL wildcard mask, a binary bit value of 1 explicitly signifies what instruction to the router?
+A. Ignore the corresponding bit value completely
+B. Match the corresponding bit value exactly
+C. Discard the packet immediately
+D. Log the matching event in volatile RAM
+ANSWER: A
+
+Question 210: What is the equivalent wildcard mask for a standard Class C subnet mask of 255.255.255.0?
+A. 0.0.0.255
+B. 255.255.255.0
+C. 0.0.255.255
+D. 0.0.0.0
+ANSWER: A
+
+Question 211: What is the equivalent wildcard mask for a standard Class B subnet mask of 255.255.0.0?
+A. 0.0.255.255
+B. 0.0.0.255
+C. 255.255.0.0
+D. 255.255.255.255
+ANSWER: A
+
+Question 212: What is the equivalent wildcard mask for a standard Class A subnet mask of 255.0.0.0?
+A. 0.255.255.255
+B. 0.0.0.255
+C. 0.0.255.255
+D. 255.0.0.0
+ANSWER: A
+
+Question 213: What specific wildcard mask string is used to match a single, specific host address precisely?
+A. 0.0.0.0
+B. 255.255.255.255
+C. 0.0.0.255
+D. 255.255.0.0
+ANSWER: A
+
+Question 214: What keyword acts as a convenient shorthand replacement for the specific host wildcard mask '0.0.0.0'?
+A. host
+B. any
+C. permit
+D. established
+ANSWER: A
+
+Question 215: What keyword acts as a convenient shorthand replacement for the global wildcard mask '255.255.255.255'?
+A. any
+B. host
+C. all
+D. deny
+ANSWER: A
+
+Question 216: A standard Access Control List filters network traffic based exclusively on which criteria?
+A. Source IP address parameter only
+B. Destination port designation only
+C. Protocol payload type only
+D. Destination MAC hardware coordinates
+ANSWER: A
+
+Question 217: An extended Access Control List filters network traffic based on which combination of elements?
+A. Source and destination IP addresses, protocol type, and port numbers
+B. Source MAC address and switch priority values only
+C. OSPF link state metrics and area indicators
+D. DHCP discover tags and lease timestamps
+ANSWER: A
+
+Question 218: What is the valid numerical range used to identify a Standard IP Access Control List on classic Cisco routers?
+A. 1 to 99
+B. 100 to 199
+C. 1000 to 1999
+D. 200 to 299
+ANSWER: A
+
+Question 219: What is the valid numerical range used to identify an Extended IP Access Control List on standard routers?
+A. 100 to 199
+B. 1 to 99
+C. 900 to 999
+D. 80 to 89
+ANSWER: A
+
+Question 220: What critical step must an administrator perform after creating an ACL to make it actively filter traffic?
+A. Apply the ACL to a specific router interface in an inbound or outbound direction
+B. Reboot the perimeter network gateway router
+C. Clear the entire dynamic switch MAC table
+D. Renew all local active DHCP client dynamic leases
+ANSWER: A
+
+Question 221: The term telecommunication means communication at a ________.
+A. distance
+B. local level
+C. high speed
+D. secure layer
+ANSWER: A
+
+Question 222: Which of the following is NOT an essential component of a data communication system?
+A. Sender
+B. Receiver
+C. Message
+D. Subnet Mask
+ANSWER: D
+
+Question 223: The fundamental characteristic of data communication that refers to the variation in packet arrival time is called ________.
+A. Jitter
+B. Accuracy
+C. Timeliness
+D. Delivery
+ANSWER: A
+
+Question 224: If a data communication system changes data and fails to correct it, the system violates which characteristic?
+A. Accuracy
+B. Timeliness
+C. Delivery
+D. Jitter
+ANSWER: A
+
+Question 225: A network that is a collection of connected computing devices is called a network, while a network of networks is an ________.
+A. internet
+B. intranet
+C. extranet
+D. LAN
+ANSWER: A
+
+Question 226: Which physical topology connects each device with a dedicated point-to-point connection to a central controller?
+A. Star
+B. Bus
+C. Ring
+D. Mesh
+ANSWER: A
+
+Question 227: In a physical mesh topology, how many physical links are needed to connect n devices?
+A. n(n-1)/2
+B. n
+C. n-1
+D. 2n
+ANSWER: A
+
+Question 228: Which topology features a main line connection called a backbone where devices connect via taps?
+A. Bus
+B. Star
+C. Ring
+D. Mesh
+ANSWER: A
+
+Question 229: A significant disadvantage of the traditional Bus topology is that ________.
+A. A break in the backbone stops all transmission
+B. It requires the most cable
+C. It relies entirely on a central switch
+D. It uses point-to-point links
+ANSWER: A
+
+Question 230: In a physical Ring topology, each device incorporates which active component to boost signals?
+A. Repeater
+B. Router
+C. Passive tap
+D. Bridge
+ANSWER: A
+
+Question 231: An organizational private network that is contained strictly within the enterprise is called an ________.
+A. Intranet
+B. Internet
+C. Extranet
+D. WAN
+ANSWER: A
+
+Question 232: When an enterprise allows authorized external entities or customers to access parts of its network, this is called an ________.
+A. Extranet
+B. Intranet
+C. Internet
+D. LAN
+ANSWER: A
+
+Question 233: Which data flow mode allows transmission in both directions, but only one direction at a time?
+A. Half-Duplex
+B. Simplex
+C. Full-Duplex
+D. Unidirectional
+ANSWER: A
+
+Question 234: Television broadcasting is an example of which type of data flow mode?
+A. Simplex
+B. Half-Duplex
+C. Full-Duplex
+D. Bidirectional
+ANSWER: A
+
+Question 235: Which characteristic ensures that a data communication system delivers packets only to the intended user?
+A. Delivery
+B. Accuracy
+C. Timeliness
+D. Jitter
+ANSWER: A
+
+Question 236: The information or data to be communicated in a data communication system is called the ________.
+A. Message
+B. Protocol
+C. Medium
+D. Sender
+ANSWER: A
+
+Question 237: The physical path over which a message travels from sender to receiver is known as the ________.
+A. Transmission Medium
+B. Protocol
+C. Interface
+D. Gateway
+ANSWER: A
+
+Question 238: A set of rules that governs data communication between entities is defined as a ________.
+A. Protocol
+B. Standard
+C. Topology
+D. Medium
+ANSWER: A
+
+Question 239: Which physical topology provides the highest level of redundancy and fault isolation?
+A. Mesh
+B. Bus
+C. Star
+D. Tree
+ANSWER: A
+
+Question 240: What is a major advantage of a Star topology over a Mesh topology?
+A. It requires less cabling and is easier to install
+B. It eliminates the central point of failure
+C. It requires no active hardware
+D. It provides direct dedicated paths between all hosts
+ANSWER: A
+
+Question 241: A Personal Area Network (PAN) typically spans a maximum connectivity range of up to ________.
+A. 10 meters
+B. 100 meters
+C. 1 kilometer
+D. 10 kilometers
+ANSWER: A
+
+Question 242: Which of the following technologies is commonly used to implement a Personal Area Network (PAN)?
+A. Bluetooth
+B. Fiber Optics
+C. Metro Ethernet
+D. OSPF
+ANSWER: A
+
+Question 243: A Local Area Network (LAN) usually connects devices within which type of geographical area?
+A. A room, building, or campus
+B. An entire city
+C. A whole continent
+D. Global endpoints
+ANSWER: A
+
+Question 244: When a network operates primarily on private IP addresses and owned infrastructure, it is a ________.
+A. LAN
+B. MAN
+C. WAN
+D. Internet
+ANSWER: A
+
+Question 245: A Metropolitan Area Network (MAN) generally expands throughout what scope?
+A. A city
+B. A home office
+C. A country
+D. A continent
+ANSWER: A
+
+Question 246: Which of the following technologies is widely utilized for Metropolitan Area Network (MAN) infrastructure?
+A. Fiber optics and Metro Ethernet
+B. Bluetooth
+C. NFC
+D. Dial-up modems
+ANSWER: A
+
+Question 247: A Wide Area Network (WAN) is best characterized by which attribute?
+A. It covers a broad geographical area such as countries or continents
+B. It is limited to a 10-meter radius
+C. It never uses routers
+D. It relies entirely on private local resources
+ANSWER: A
+
+Question 248: Which networking device belongs strictly to only ONE collision domain and copies incoming signals to all ports?
+A. Hub
+B. Switch
+C. Router
+D. Bridge
+ANSWER: A
+
+Question 249: Which layer 2 device separates collision domains on every single port but maintains a single broadcast domain?
+A. Switch
+B. Hub
+C. Repeater
+D. Amplifier
+ANSWER: A
+
+Question 250: Which layer 3 device separates both collision domains and broadcast domains?
+A. Router
+B. Switch
+C. Hub
+D. Repeater
+ANSWER: A
+
+Question 251: What protocol does Ethernet use to manage shared bandwidth and handle simultaneous transmissions?
+A. CSMA/CD
+B. STP
+C. OSPF
+D. ICMP
+ANSWER: A
+
+Question 252: In CSMA/CD, what is the length of the jam signal sent to inform all devices that a collision occurred?
+A. 32 bits
+B. 64 bits
+C. 16 bits
+D. 128 bits
+ANSWER: A
+
+Question 253: What algorithm is invoked by devices on an Ethernet segment immediately after a collision occurs?
+A. Random backoff algorithm
+B. Dijkstra algorithm
+C. Spanning tree algorithm
+D. Bellman-Ford algorithm
+ANSWER: A
+
+Question 254: Why do networks utilize a layered communication architecture?
+A. To reduce complexity by splitting tasks into smaller pieces
+B. To increase propagation delay
+C. To eliminate the need for protocols
+D. To prevent the use of routers
+ANSWER: A
+
+Question 255: In a layered approach, each layer provides services to the layer immediately ________.
+A. above it
+B. below it
+C. across the router
+D. inside the hub
+ANSWER: A
+
+Question 256: A logical area where broadcast frames are received by all devices is known as a ________.
+A. Broadcast domain
+B. Collision domain
+C. Subnet mask
+D. VLAN tag
+ANSWER: A
+
+Question 257: Hubs belong to how many collision domains?
+A. One
+B. Two
+C. As many as the number of ports
+D. Zero
+ANSWER: A
+
+Question 258: If a switch has 24 ports, how many separate collision domains does it create?
+A. 24
+B. 1
+C. 12
+D. 0
+ANSWER: A
+
+Question 259: By default, how many broadcast domains does a standard unconfigured 24-port switch represent?
+A. One
+B. 24
+C. Two
+D. Zero
+ANSWER: A
+
+Question 260: What is the primary function of the jam signal in an Ethernet network running CSMA/CD?
+A. To notify all devices that a collision has occurred
+B. To clear the MAC table
+C. To route packets to the next hop
+D. To renew the DHCP lease
+ANSWER: A
+
+Question 261: The Open Systems Interconnection (OSI) model was created by which international body?
+A. ISO
+B. IEEE
+C. IETF
+D. DoD
+ANSWER: A
+
+Question 262: The OSI model consists of how many distinct layers?
+A. 7
+B. 4
+C. 5
+D. 6
+ANSWER: A
+
+Question 263: Which layers of the OSI model are known as the Upper Layers or User Support Layers?
+A. Application, Presentation, Session
+B. Transport, Network, Data-Link
+C. Network, Data-Link, Physical
+D. Physical, Data-Link, Transport
+ANSWER: A
+
+Question 264: The Upper Layers of the OSI model are primarily implemented in ________.
+A. Software
+B. Hardware
+C. Firmware
+D. Cabling
+ANSWER: A
+
+Question 265: Which OSI layer provides the direct interface between the user application and the network?
+A. Application Layer
+B. Presentation Layer
+C. Session Layer
+D. Transport Layer
+ANSWER: A
+
+Question 266: HTTP, FTP, and SMTP are protocols that operate at which layer of the OSI model?
+A. Application Layer
+B. Presentation Layer
+C. Transport Layer
+D. Network Layer
+ANSWER: A
+
+Question 267: Which OSI layer is responsible for data translation, formatting, encryption, and compression?
+A. Presentation Layer
+B. Session Layer
+C. Application Layer
+D. Transport Layer
+ANSWER: A
+
+Question 268: HTML, XML, GIF, and JPEG are standards associated with which layer of the OSI model?
+A. Presentation Layer
+B. Application Layer
+C. Session Layer
+D. Network Layer
+ANSWER: A
+
+Question 269: Which OSI layer is responsible for establishing, maintaining, and terminating synchronization sessions between devices?
+A. Session Layer
+B. Transport Layer
+C. Presentation Layer
+D. Network Layer
+ANSWER: A
+
+Question 270: The Department of Defense (DoD) model is also commonly known as the ________.
+A. TCP/IP Model
+B. OSI Model
+C. ISO Model
+D. IEEE Model
+ANSWER: A
+
+Question 271: The classic DoD or original TCP/IP model consists of how many layers?
+A. 4
+B. 7
+C. 5
+D. 3
+ANSWER: A
+
+Question 272: Which layer of the OSI model is responsible for end-to-end connection control, flow control, and error recovery?
+A. Transport Layer
+B. Network Layer
+C. Data-Link Layer
+D. Physical Layer
+ANSWER: A
+
+Question 273: What are the two primary protocols operating at the Transport layer of the TCP/IP suite?
+A. TCP and UDP
+B. IP and ICMP
+C. HTTP and FTP
+D. ARP and RARP
+ANSWER: A
+
+Question 274: Which OSI layer is responsible for determining the best logical path to route data across networks?
+A. Network Layer
+B. Data-Link Layer
+C. Physical Layer
+D. Transport Layer
+ANSWER: A
+
+Question 275: IP and ICMP operate at which layer of the OSI reference model?
+A. Network Layer
+B. Transport Layer
+C. Data-Link Layer
+D. Physical Layer
+ANSWER: A
+
+Question 276: As packets travel across networks, logical IP addresses are translated to hardware MAC addresses at which layer?
+A. Data-Link Layer
+B. Network Layer
+C. Physical Layer
+D. Transport Layer
+ANSWER: A
+
+Question 277: The Physical layer handles data transfer across the network medium in the form of raw ________.
+A. bits
+B. packets
+C. frames
+D. segments
+ANSWER: A
+
+Question 278: What is a 16-bit address used to identify specific processes or applications running on a host?
+A. Port address
+B. IP address
+C. MAC address
+D. Hardware address
+ANSWER: A
+
+Question 279: In the mnemonic 'Please Do Not Throw Sausage Pizza Away', the letter 'P' stands for which layer?
+A. Physical
+B. Presentation
+C. Protocol
+D. Port
+ANSWER: A
+
+Question 280: Which type of address changes from hop to hop as a packet traverses intermediate routers?
+A. Physical Address
+B. Logical Address
+C. Port Address
+D. Email Address
+ANSWER: A
+
+Question 281: How many bits long is an IPv4 address?
+A. 32 bits
+B. 64 bits
+C. 128 bits
+D. 16 bits
+ANSWER: A
+
+Question 282: The total number of addresses available in an address space defined by b bits is equal to ________.
+A. 2^b
+B. 2*b
+C. b^2
+D. 16^b
+ANSWER: A
+
+Question 283: Which notation represents an IPv4 address by separating four decimal integers with dots?
+A. Dotted-decimal notation
+B. Hexadecimal notation
+C. Binary notation
+D. Octal notation
+ANSWER: A
+
+Question 284: What is the first byte range for a Class A IP address in classful routing?
+A. 0 to 127
+B. 128 to 191
+C. 192 to 223
+D. 224 to 239
+ANSWER: A
+
+Question 285: What is the first byte range for a Class B IP address?
+A. 128 to 191
+B. 0 to 127
+C. 192 to 223
+D. 224 to 239
+ANSWER: A
+
+Question 286: What is the first byte range for a Class C IP address?
+A. 192 to 223
+B. 128 to 191
+C. 0 to 127
+D. 224 to 239
+ANSWER: A
+
+Question 287: Which IP address class is specifically reserved for multicast addressing?
+A. Class D
+B. Class C
+C. Class B
+D. Class E
+ANSWER: A
+
+Question 288: What is the default subnet mask for a Class A network address?
+A. 255.0.0.0
+B. 255.255.0.0
+C. 255.255.255.0
+D. 255.255.255.255
+ANSWER: A
+
+Question 289: What is the default subnet mask for a Class B network address?
+A. 255.255.0.0
+B. 255.0.0.0
+C. 255.255.255.0
+D. 255.255.255.255
+ANSWER: A
+
+Question 290: What is the default subnet mask for a Class C network address?
+A. 255.255.255.0
+B. 255.255.0.0
+C. 255.0.0.0
+D. 255.255.255.255
+ANSWER: A
+
+Question 291: The first address of an IP block is reserved and utilized as the ________.
+A. Network Address
+B. Broadcast Address
+C. Host Address
+D. Gateway Address
+ANSWER: A
+
+Question 292: What technique allows an administrator to divide a single classful network into smaller, fixed-size logical segments?
+A. Subnetting
+B. Supernetting
+C. VLSM
+D. Anycasting
+ANSWER: A
+
+Question 293: What does the acronym CIDR stand for in modern IP routing?
+A. Classless Inter-Domain Routing
+B. Classful Internet Data Relay
+C. Computer Internet Network Domain
+D. Core Internetwork Direct Router
+ANSWER: A
+
+Question 294: What does VLSM stand for?
+A. Variable Length Subnet Masking
+B. Virtual Local Subnet Management
+C. Vector Length Subnet Matrix
+D. Variable Logical Subnet Masking
+ANSWER: A
+
+Question 295: Why would an organization or ISP implement Variable Length Subnet Masking (VLSM)?
+A. To allow subnets of different sizes and minimize address wastage
+B. To completely eliminate the network layer
+C. To force all networks to use Class A addresses
+D. To convert IPv4 into IPv6 automatically
+ANSWER: A
+
+Question 296: What is the process of combining multiple contiguous networks into a single larger network block called?
+A. Supernetting
+B. Subnetting
+C. VLSM
+D. Fragmentation
+ANSWER: A
+
+Question 297: In classless addressing, the slash notation (e.g., /24) represents the number of bits in the ________.
+A. Prefix length
+B. Host identifier
+C. MAC address
+D. Port number
+ANSWER: A
+
+Question 298: Given a network address of 192.168.1.0/24, how many total host addresses can exist in this block?
+A. 256
+B. 512
+C. 128
+D. 64
+ANSWER: A
+
+Question 299: How many USABLE host addresses are available in a standard /24 subnet block?
+A. 254
+B. 256
+C. 255
+D. 252
+ANSWER: A
+
+Question 300: What is the default prefix length for a standard Class B network block?
+A. /16
+B. /8
+C. /24
+D. /32
+ANSWER: A
+
+Question 301: How many bits long is an IPv6 address?
+A. 128 bits
+B. 32 bits
+C. 64 bits
+D. 256 bits
+ANSWER: A
+
+Question 302: IPv6 addresses are written using which notation system?
+A. Hexadecimal notation separated by colons
+B. Dotted-decimal notation
+C. Binary digits separated by slashes
+D. Octal integers
+ANSWER: A
+
+Question 303: How many fields or groupings of hexadecimal digits make up a full IPv6 address?
+A. 8 fields
+B. 4 fields
+C. 16 fields
+D. 6 fields
+ANSWER: A
+
+Question 304: Each field or grouping in an IPv6 address consists of how many bits?
+A. 16 bits
+B. 32 bits
+C. 8 bits
+D. 4 bits
+ANSWER: A
+
+Question 305: Which feature of IPv6 allows hosts to auto-configure their own addresses using router advertisements?
+A. Stateless Address Autoconfiguration (SLAAC)
+B. DHCP lease backup
+C. CSMA/CD monitoring
+D. STP converging
+ANSWER: A
+
+Question 306: Security is integrated natively into the IPv6 network header through built-in support for ________.
+A. IPsec
+B. WPA3
+C. NAT Overload
+D. Proxy ARP
+ANSWER: A
+
+Question 307: The IPv6 loopback or localhost address is represented in its compressed form as ________.
+A. ::1
+B. 127.0.0.1
+C. FE80::1
+D. FF02::1
+ANSWER: A
+
+Question 308: IPv6 Link-Local addresses are restricted to a single link and always begin with the prefix ________.
+A. FE80::/10
+B. FEC0::/10
+C. 2000::/3
+D. FF00::/8
+ANSWER: A
+
+Question 309: Which type of IPv6 address is equivalent to the 'private' IPv4 address spaces and begins with FECx?
+A. Site-Local Address
+B. Link-Local Address
+C. Aggregate Global Address
+D. Multicast Address
+ANSWER: A
+
+Question 310: Which type of IPv6 address is equivalent to a 'public' IPv4 address and typically begins with 2xxx or 3xxx?
+A. Aggregate Global Address
+B. Link-Local Address
+C. Site-Local Address
+D. Loopback Address
+ANSWER: A
+
+Question 311: IPv6 Multicast addresses always begin with which specific hexadecimal prefix?
+A. FFxx:
+B. FE8x:
+C. FECx:
+D. 3xxx:
+ANSWER: A
+
+Question 312: What type of address identifies a group of interfaces on multiple hosts where a packet is delivered to the nearest interface?
+A. Anycast Address
+B. Multicast Address
+C. Unicast Address
+D. Broadcast Address
+ANSWER: A
+
+Question 313: Which of the following communication types has been completely removed from IPv6?
+A. Broadcast
+B. Multicast
+C. Unicast
+D. Anycast
+ANSWER: A
+
+Question 314: What does the EUI-64 format expand or configure?
+A. A 48-bit MAC address into a 64-bit interface ID
+B. An IPv4 address into an IPv6 address
+C. A port number into a socket link
+D. A standard subnet mask into a prefix length
+ANSWER: A
+
+Question 315: How many hexadecimal characters are contained within each field of a standard IPv6 address?
+A. 4
+B. 2
+C. 8
+D. 6
+ANSWER: A
+
+Question 316: If an IPv6 field contains '0000', it can be compressed or written as a single ________.
+A. 0
+B. X
+C. ::
+D. 1
+ANSWER: A
+
+Question 317: The double colon (::) compression operator in an IPv6 address can be used how many times in a single address?
+A. Only once
+B. Twice
+C. As many times as needed
+D. Up to four times
+ANSWER: A
+
+Question 318: What is the primary driver behind the global transition from IPv4 to IPv6?
+A. Exhaustion of the IPv4 address space
+B. To speed up the CSMA/CD backoff algorithm
+C. To eliminate the use of switches
+D. To increase the size of a MAC address
+ANSWER: A
+
+Question 319: What is the length of the interface identifier portion of a standard global unicast IPv6 address?
+A. 64 bits
+B. 32 bits
+C. 48 bits
+D. 128 bits
+ANSWER: A
+
+Question 320: In an IPv6 environment, which mechanism allows for backwards compatibility and co-existence with older IPv4 hosts?
+A. Dual-stack or tunneling mechanisms
+B. STP fallback loops
+C. NAT overloading only
+D. CSMA/CD scaling
+ANSWER: A
+
+Question 321: What is the primary function of the Address Resolution Protocol (ARP)?
+A. To map a known logical IP address to a physical MAC address
+B. To resolve domain names to IP addresses
+C. To assign dynamic IP addresses to clients
+D. To calculate the shortest path to a network
+ANSWER: A
+
+Question 322: Where does an end station store recently learned IP-to-MAC address mappings to avoid repetitive broadcasts?
+A. ARP cache table
+B. Routing table
+C. DNS zone file
+D. MAC address table of the switch
+ANSWER: A
+
+Question 323: An ARP request frame is sent out onto the local network segment as a ________.
+A. Broadcast
+B. Unicast
+C. Anycast
+D. Multicast
+ANSWER: A
+
+Question 324: An ARP reply message is sent back to the original requestor as a ________.
+A. Unicast
+B. Broadcast
+C. Multicast
+D. Anycast
+ANSWER: A
+
+Question 325: What type of ARP setup allows a router to answer ARP requests on behalf of a remote destination host?
+A. Proxy ARP
+B. Gratuitous ARP
+C. Reverse ARP
+D. Inverse ARP
+ANSWER: A
+
+Question 326: Which protocol was traditionally used by diskless workstations to discover their IP address given their MAC address?
+A. RARP
+B. ARP
+C. DHCP request
+D. ICMP query
+ANSWER: A
+
+Question 327: What type of special ARP packet is generated spontaneously by a host when its interface link goes up?
+A. Gratuitous ARP (GARP)
+B. Proxy ARP
+C. Inverse ARP
+D. Reverse ARP
+ANSWER: A
+
+Question 328: Gratuitous ARP (GARP) is exceptionally valuable for which network troubleshooting task?
+A. Discovering and detecting duplicate IP address conflicts
+B. Building a comprehensive routing table
+C. Updating DNS forward lookup zones
+D. Renewing a local DHCP server lease
+ANSWER: A
+
+Question 329: Which Layer 2 protocol uses Inverse ARP to associate a Data Link Connection Identifier (DLCI) with an IP address?
+A. Frame Relay
+B. Ethernet
+C. Token Ring
+D. PPP
+ANSWER: A
+
+Question 330: What does the acronym ICMP stand for?
+A. Internet Control Message Protocol
+B. Internal Cluster Management Protocol
+C. Inter-network Connection Message Protocol
+D. Integrated Circuit Message Protocol
+ANSWER: A
+
+Question 331: What is the central purpose of the ICMP protocol in an IP network environment?
+A. To provide feedback and report errors about communication problems
+B. To encrypt user payload data
+C. To maintain the Spanning Tree topology
+D. To allocate dynamic logical ports
+ANSWER: A
+
+Question 332: Which popular diagnostic utility utilizes ICMP Echo Request and Echo Reply messages?
+A. Ping
+B. Nslookup
+C. Ipconfig
+D. Arp -a
+ANSWER: A
+
+Question 333: Which diagnostic tool utilizes an increasing Time-to-Live (TTL) field to map out each hop along a path?
+A. Traceroute / Tracert
+B. Ping
+C. Netstat
+D. Ipconfig /renew
+ANSWER: A
+
+Question 334: What two metrics are commonly monitored and displayed by a successful execution of the Ping tool?
+A. Round Trip Time (RTT) and Time to Live (TTL)
+B. MAC address and port number
+C. Subnet mask and domain name
+D. Bandwidth and CPU utilization
+ANSWER: A
+
+Question 335: In the Ping command, what does the switch '-t' execute on a standard Windows CLI console?
+A. Pings the specified host continuously until interrupted
+B. Resolves addresses to hostnames
+C. Sets the exact size of the echo packet
+D. Changes the default TTL value
+ANSWER: A
+
+Question 336: What action will a receiving router take if the TTL value in an IP packet header decrements to zero?
+A. Discard the packet and send an ICMP Time Exceeded message to the source
+B. Forward the packet using a backup default static route
+C. Broadcast the packet across all local interfaces
+D. Silently store the packet inside its active volatile RAM buffer
+ANSWER: A
+
+Question 337: ICMP messages are encapsulated directly inside the payload field of which protocol?
+A. IP
+B. TCP
+C. UDP
+D. Ethernet
+ANSWER: A
+
+Question 338: Which ICMP message type notifies a sending station that a specific network or host is currently unreachable?
+A. Destination Unreachable
+B. Source Quench
+C. Time Exceeded
+D. Echo Reply
+ANSWER: A
+
+Question 339: An ARP request frame uses which destination physical MAC address?
+A. FF-FF-FF-FF-FF-FF
+B. 00-00-00-00-00-00
+C. 127.0.0.1
+D. 255.255.255.255
+ANSWER: A
+
+Question 340: The 'arp -a' command executed at a command prompt displays what information?
+A. The current contents of the local ARP cache table
+B. The active routing table entries
+C. The configured DNS resolver addresses
+D. The DHCP lease expiration details
+ANSWER: A
+
+Question 341: What does the acronym DNS stand for?
+A. Domain Name System
+B. Dynamic Network Service
+C. Distributed Node Server
+D. Data Network Standard
+ANSWER: A
+
+Question 342: DNS is frequently referred to as the 'phone book' of the Internet because it translates ________.
+A. Domain names into IP addresses
+B. MAC addresses into IP addresses
+C. Port numbers into application names
+D. Private IP addresses into public IP addresses
+ANSWER: A
+
+Question 343: If a user wants to bypass DNS and visit a website directly via IPv4, they must enter its ________.
+A. IP address
+B. MAC address
+C. Port number
+D. Subnet mask
+ANSWER: A
+
+Question 344: What type of DNS zone map is specifically responsible for mapping a domain name to an IP address?
+A. Forward Lookup Zone
+B. Reverse Lookup Zone
+C. Stub Zone
+D. Root Zone
+ANSWER: A
+
+Question 345: What does the acronym DHCP stand for in network management?
+A. Dynamic Host Configuration Protocol
+B. Domain Host Connection Protocol
+C. Distributed Hub Control Protocol
+D. Dynamic Network Configuration Protocol
+ANSWER: A
+
+Question 346: What is the primary objective of implementing a DHCP server on a network?
+A. To automatically assign IP addresses and network settings to client hosts
+B. To prevent unauthorized access using wildcard masks
+C. To block loops in standard redundant switch structures
+D. To route packets across multiple WAN boundaries
+ANSWER: A
+
+Question 347: The standard four-step operational sequence of a DHCP transaction is represented by the acronym ________.
+A. DORA
+B. ARPA
+C. OSPF
+D. SLAAC
+ANSWER: A
+
+Question 348: What does the 'D' in the DHCP DORA process stand for?
+A. Discover
+B. Direct
+C. Disconnect
+D. Domain
+ANSWER: A
+
+Question 349: What does the 'O' in the DHCP DORA process stand for?
+A. Offer
+B. Open
+C. Output
+D. Overload
+ANSWER: A
+
+Question 350: What does the 'R' in the DHCP DORA process stand for?
+A. Request
+B. Release
+C. Renew
+D. Resolve
+ANSWER: A
+
+Question 351: What does the 'A' in the DHCP DORA process stand for?
+A. Acknowledgement
+B. Address
+C. Allocation
+D. Anycast
+ANSWER: A
+
+Question 352: The initial DHCPDISCOVER message is sent out by a client workstation as a ________.
+A. Broadcast
+B. Unicast
+C. Multicast
+D. Anycast
+ANSWER: A
+
+Question 353: By default, what is the standard duration of an IP address lease period assigned by a DHCP server?
+A. 8 days
+B. 24 hours
+C. 30 days
+D. 1 hour
+ANSWER: A
+
+Question 354: At what percentage of lease duration expiration does a DHCP client first attempt to renew its lease?
+A. 50%
+B. 87.5%
+C. 100%
+D. 25%
+ANSWER: A
+
+Question 355: If a Windows client cannot reach a DHCP server, it may auto-assign a private link IP from which range?
+A. 169.254.0.0 to 169.254.255.255
+B. 127.0.0.0 to 127.255.255.255
+C. 192.168.1.0 to 192.168.1.255
+D. 0.0.0.0
+ANSWER: A
+
+Question 356: Which command line utility releases an active dynamic IP address allocation back to the DHCP pool?
+A. ipconfig /release
+B. ipconfig /renew
+C. ipconfig /all
+D. nslookup
+ANSWER: A
+
+Question 357: Which command line utility requests a brand new or renewed IP address lease allocation from a DHCP server?
+A. ipconfig /renew
+B. ipconfig /release
+C. ipconfig /all
+D. ping
+ANSWER: A
+
+Question 358: The 'ipconfig /all' command is highly useful because it displays what explicit information?
+A. Detailed IP configuration, MAC addresses, and DNS server settings
+B. The complete local routing table
+C. The active Spanning Tree root bridge port metrics
+D. The running dynamic routing protocol updates
+ANSWER: A
+
+Question 359: A DHCPOFFER message is dispatched from the server back to the client as a ________.
+A. Unicast or Broadcast depending on implementation
+B. Multicast always
+C. Anycast always
+D. Loopback packet
+ANSWER: A
+
+Question 360: A DHCPREQUEST message contains a source IP address of what value since the client is not yet finalized?
+A. 0.0.0.0
+B. 255.255.255.255
+C. 127.0.0.1
+D. 169.254.1.1
+ANSWER: A
+
+Question 361: What is the core purpose of the Spanning Tree Protocol (STP) in a switched network?
+A. To prevent Layer 2 loops on redundant switched topologies
+B. To route packets between separate IP subnets
+C. To translate domain names to MAC addresses
+D. To filter traffic using port-based access control lists
+ANSWER: A
+
+Question 362: STP was originally codified and standardized under which specific IEEE working group specification?
+A. IEEE 802.1D
+B. IEEE 802.3
+C. IEEE 802.11
+D. IEEE 802.1X
+ANSWER: A
+
+Question 363: Which malicious condition occurs when redundant unblocked switch loops allow frames to multiply endlessly?
+A. Broadcast storm
+B. MAC address flapping
+C. IP address depletion
+D. Route poisoning
+ANSWER: A
+
+Question 364: What issue occurs when a switch receives identical frames on different ports, corrupting its CAM table?
+A. MAC Address Flapping or Instability
+B. Routing loop
+C. DHCP lease expiration
+D. ICMP destination unreachable
+ANSWER: A
+
+Question 365: What is the specialized frame structure exchanged between switches running STP to maintain topology maps?
+A. Bridge Protocol Data Unit (BPDU)
+B. Internet Control Message Packet
+C. DORA discovery frame
+D. Wildcard sequence frame
+ANSWER: A
+
+Question 366: What is the first critical step in the STP logical convergence sequence?
+A. Electing a single Root Bridge for the network
+B. Identifying all blocked ports
+C. Calculating the administrative distance
+D. Configuring a NAT address pool
+ANSWER: A
+
+Question 367: The criteria for electing an STP Root Bridge relies on selecting the switch with the lowest ________.
+A. Bridge ID (BID)
+B. MAC address only
+C. Priority value only
+D. Root Path Cost
+ANSWER: A
+
+Question 368: A standard Bridge ID (BID) inside an STP configuration frame is composed of which two primary values?
+A. Bridge Priority and the switch MAC address
+B. IP address and port number
+C. Subnet mask and interface prefix
+D. VLAN ID and autonomous system number
+ANSWER: A
+
+Question 369: What is the default bridge priority value pre-configured on all standard industry switches running STP?
+A. 32,768
+B. 100
+C. 1
+D. 65,535
+ANSWER: A
+
+Question 370: The port on an individual non-root switch that presents the absolute lowest cumulative path cost to the Root Bridge is the ________.
+A. Root Port
+B. Designated Port
+C. Blocking Port
+D. Disabled Port
+ANSWER: A
+
+Question 371: How many Root Ports can be actively elected on a single operational non-root switch?
+A. One
+B. Two
+C. As many as the active connections
+D. Zero
+ANSWER: A
+
+Question 372: How many Root Ports exist on the officially elected Root Bridge switch itself?
+A. Zero
+B. One
+C. Two
+D. All ports are root ports
+ANSWER: A
+
+Question 373: A single port designated per individual network segment that forwards frames with the lowest path cost to the root is the ________.
+A. Designated Port
+B. Root Port
+C. Alternate Port
+D. Loop Port
+ANSWER: A
+
+Question 374: Ports on an active Root Bridge switch are always placed into which specific STP functional role?
+A. Designated Ports
+B. Root Ports
+C. Blocking Ports
+D. Alternate Ports
+ANSWER: A
+
+Question 375: What type of BPDU is generated by a local switch to signal that a physical interface link has gone up or down?
+A. Topology Change Notification (TCN) BPDU
+B. Configuration BPDU
+C. Dynamic ARP Request
+D. ICMP redirect packet
+ANSWER: A
+
+Question 376: In which STP state does an interface only process incoming BPDUs while strictly refusing to forward user data frames?
+A. Blocking
+B. Forwarding
+C. Listening
+D. Learning
+ANSWER: A
+
+Question 377: In which STP state does a switch port actively analyze incoming data frames to build its MAC table without forwarding them yet?
+A. Learning
+B. Listening
+C. Blocking
+D. Disabled
+ANSWER: A
+
+Question 378: Which STP port state allows the interface to freely send and receive BPDUs, populate the MAC table, and forward user traffic?
+A. Forwarding
+B. Learning
+C. Listening
+D. Blocking
+ANSWER: A
+
+Question 379: What metric defines the cumulative path cost to the Root Bridge based heavily on individual link bandwidth factors?
+A. Root Path Cost
+B. Administrative Distance
+C. Hop Count
+D. Wildcard metric
+ANSWER: A
+
+Question 380: If a failed root bridge with a superior low BID comes back online, what does STP execute?
+A. It re-converges and elects the recovered switch as the Root Bridge again
+B. It permanently ignores the recovered switch
+C. It triggers an immediate broadcast storm
+D. It disables all ports on the entire network
+ANSWER: A
+
+Question 381: What is the definitive operational concept of Layer 3 IP routing?
+A. Sending a packet of information from one network to another network
+B. Switching frames based on target hardware MAC entries
+C. Assigning dynamic IP details inside a local area broadcast domain
+D. Preventing data loops using active BPDU metrics
+ANSWER: A
+
+Question 382: IP routing table match decisions are fundamentally executed based upon the target host's ________.
+A. Destination network address
+B. Source MAC address
+C. Logical port designation
+D. Active gateway preference
+ANSWER: A
+
+Question 383: A protocol that defines logical structures and carries user payload data across networks is known as a ________.
+A. Routed protocol (e.g., IP)
+B. Routing protocol (e.g., OSPF)
+C. Spanning tree standard
+D. Link-state table
+ANSWER: A
+
+Question 384: A protocol that dynamically discovers networks and constructs local interface routing tables is a ________.
+A. Routing protocol (e.g., RIP, OSPF)
+B. Routed protocol (e.g., IP)
+C. Data link layer standard
+D. Transport framework
+ANSWER: A
+
+Question 385: To determine the ultimate best route to a target destination, a router evaluates three elements in what exact order?
+A. Prefix-Length, Metric, Administrative Distance
+B. Administrative Distance, Metric, Prefix-Length
+C. Metric, Prefix-Length, Administrative Distance
+D. MAC address, IP address, Port number
+ANSWER: A
+
+Question 386: A longer prefix-length (e.g., /28 vs /24) indicates what attribute inside a router's decision engine?
+A. A more specific and preferred route match
+B. An invalid classful network block
+C. A slower routing convergence path
+D. A higher administrative distance rating
+ANSWER: A
+
+Question 387: What metric defines the relative trustworthiness of a routing protocol source compared to alternative options?
+A. Administrative Distance (AD)
+B. Hop Count metric
+C. Bandwidth cost formula
+D. Prefix suffix configuration
+ANSWER: A
+
+Question 388: What is the pre-defined Administrative Distance of a directly connected local network interface?
+A. 0
+B. 1
+C. 90
+D. 110
+ANSWER: A
+
+Question 389: What is the default Administrative Distance assigned to a manually configured static route?
+A. 1
+B. 0
+C. 120
+D. 100
+ANSWER: A
+
+Question 390: What type of route is explicitly designated as the path of last resort for packets with no specific match in the routing table?
+A. Default static route (0.0.0.0/0)
+B. Loopback interface route
+C. Classful network block
+D. Dynamic OSPF area link
+ANSWER: A
+
+Question 391: The Routing Information Protocol (RIP) is categorized under which class of routing algorithms?
+A. Distance Vector
+B. Link-State
+C. Path Vector
+D. Hybrid Matrix
+ANSWER: A
+
+Question 392: What metric does the Routing Information Protocol (RIP) utilize to determine the best path to a network?
+A. Hop count
+B. Bandwidth cost
+C. Delay and jitter calculations
+D. Reliability metrics
+ANSWER: A
+
+Question 393: What is the maximum allowable hop count limit supported by the Routing Information Protocol (RIP)?
+A. 15 hops
+B. 100 hops
+C. 255 hops
+D. Unlimited
+ANSWER: A
+
+Question 394: What occurs to an active IP packet inside a RIP routing environment if its hop count reaches a value of 16?
+A. It is marked as unreachable and discarded
+B. It is forwarded via a fast default static route
+C. It triggers an immediate topology change notification
+D. It loops infinitely through active switches
+ANSWER: A
+
+Question 395: What type of routing protocol is the Open Shortest Path First (OSPF) protocol?
+A. Link-State routing protocol
+B. Distance Vector protocol
+C. Classful distance protocol
+D. Static path algorithm
+ANSWER: A
+
+Question 396: To scale efficiently to large, enterprise-grade networks, OSPF splits its architecture using logical ________.
+A. Areas
+B. Subnets
+C. VLANs
+D. Bridge loops
+ANSWER: A
+
+Question 397: OSPF routers exchange direct link updates and operational status parameters through specialized ________.
+A. Link-State Advertisements (LSAs)
+B. Distance Vector update packets
+C. BPDU topology maps
+D. DHCP discover frames
+ANSWER: A
+
+Question 398: What mathematical algorithm does OSPF run to calculate the absolute shortest path tree to destination blocks?
+A. Dijkstra algorithm
+B. Random backoff algorithm
+C. Bellman-Ford algorithm
+D. Spanning tree loop check
+ANSWER: A
+
+Question 399: What metric does OSPF implement to determine path efficiency, and how is it derived?
+A. Cost, calculated based upon link bandwidth parameters
+B. Hop count up to a limit of 15
+C. Administrative distance scaling
+D. Wildcard mask ranges
+ANSWER: A
+
+Question 400: What is the standard pre-configured Administrative Distance of an OSPF dynamic routing source?
+A. 110
+B. 120
+C. 90
+D. 100
+ANSWER: A
+
+Question 401: What does the acronym NAT stand for?
+A. Network Address Translation
+B. Network Access Timing
+C. Node Allocation Table
+D. Dynamic Address Tracking
+ANSWER: A
+
+Question 402: What is the primary function of Network Address Translation (NAT) inside a gateway router?
+A. Converting between private IP addresses and public IP addresses
+B. Preventing loops on dynamic switch ports
+C. Resolving domain strings to target MAC destinations
+D. Applying standard wildcard filters to source traffic
+ANSWER: A
+
+Question 403: Which of the following IP blocks is explicitly reserved for Class A private networks?
+A. 10.0.0.0 to 10.255.255.255
+B. 172.16.0.0 to 172.31.255.255
+C. 192.168.0.0 to 192.168.255.255
+D. 169.254.0.0 to 169.254.255.255
+ANSWER: A
+
+Question 404: Which IP range is explicitly reserved for Class B private organizational network spaces?
+A. 172.16.0.0 to 172.31.255.255
+B. 10.0.0.0 to 10.255.255.255
+C. 192.168.0.0 to 192.168.255.255
+D. 127.0.0.0 to 127.255.255.255
+ANSWER: A
+
+Question 405: Which IP range is explicitly reserved for Class C private local network blocks?
+A. 192.168.0.0 to 192.168.255.255
+B. 10.0.0.0 to 10.255.255.255
+C. 172.16.0.0 to 172.31.255.255
+D. 224.0.0.0 to 239.255.255.255
+ANSWER: A
+
+Question 406: What is a defining attribute of a public IP address space compared to a private block?
+A. Public addresses are globally unique and routable over the Internet
+B. Public addresses can only be used on local LAN segments
+C. Public addresses are generated by the CSMA/CD loop protocol
+D. Public addresses are restricted to 48 bits in length
+ANSWER: A
+
+Question 407: What form of NAT provides a strict, permanent one-to-one mapping between a local private IP and a public global IP?
+A. Static NAT
+B. Dynamic NAT
+C. PAT or Overloading
+D. Proxy Address Translation
+ANSWER: A
+
+Question 408: What form of NAT maps an unregistered internal private IP address to an available public IP selected from a pool?
+A. Dynamic NAT
+B. Static NAT
+C. NAT Overload
+D. Port Forwarding
+ANSWER: A
+
+Question 409: What type of NAT mapping is also known as Port Address Translation (PAT) or Overloading?
+A. Many-to-one mapping using unique tracking port entries
+B. One-to-one static allocation
+C. Classful mask conversion
+D. Anycast public interface pairing
+ANSWER: A
+
+Question 410: Why is NAT Overload (PAT) the most popular and widely deployed form of address translation?
+A. It allows thousands of internal hosts to share a single public IP simultaneously
+B. It completely removes the need for an internal routing table
+C. It automatically switches local connections into IPv6 nodes
+D. It functions without using any Layer 4 port descriptors
+ANSWER: A
+
+Question 411: In Cisco NAT terminology, what is the designation of a local host's private IP address before translation occurs?
+A. Inside Local Address
+B. Inside Global Address
+C. Outside Local Address
+D. Outside Global Address
+ANSWER: A
+
+Question 412: In Cisco NAT terminology, what is the post-translation public IP address of an internal host on the internet?
+A. Inside Global Address
+B. Inside Local Address
+C. Outside Local Address
+D. Outside Global Address
+ANSWER: A
+
+Question 413: What configuration command designates a physical interface as the internal boundary for NAT translation?
+A. ip nat inside
+B. ip nat outside
+C. ip nat pool
+D. ip nat overload
+ANSWER: A
+
+Question 414: What configuration command designates an interface as the external public internet boundary for NAT processing?
+A. ip nat outside
+B. ip nat inside
+C. ip nat pool
+D. access-list permit
+ANSWER: A
+
+Question 415: What keyword appended to a Cisco NAT source command enables Port Address Translation (PAT)?
+A. overload
+B. dynamic
+C. static
+D. pool
+ANSWER: A
+
+Question 416: A NAT table entry contains translations mapping internal network elements to external destinations using ________.
+A. IP addresses and port numbers
+B. MAC addresses and switch priority values
+C. Wildcard masks and area identifiers
+D. Hop counts and bridge IDs
+ANSWER: A
+
+Question 417: What is a major advantage of implementing NAT inside an enterprise network edge?
+A. It conserves public IPv4 addresses and enhances internal network obfuscation
+B. It eliminates processing overhead on the perimeter gateway router
+C. It speeds up the local Spanning Tree protocol convergence
+D. It allows uninhibited end-to-end trace auditing across all hops
+ANSWER: A
+
+Question 418: What is a potential disadvantage of utilizing Network Address Translation?
+A. It causes packet processing delays and disrupts certain applications requiring true end-to-end visibility
+B. It increases public address lease cost exponentially
+C. It completely disables the use of dynamic static routing
+D. It restricts local network hosts to using only Simplex transmission mode
+ANSWER: A
+
+Question 419: The command 'ip nat pool MY_POOL 200.1.1.1 200.1.1.10 netmask 255.255.255.0' achieves what exact task?
+A. Defines a pool of valid public IP addresses for address translation
+B. Permits internal private hosts to bypass the local firewall configuration
+C. Establishes a static one-to-one route for target web servers
+D. Binds an access control list to a specific WAN link interface
+ANSWER: A
+
+Question 420: Which layer of the OSI model does Port Address Translation (PAT) heavily interact with to distinguish host sessions?
+A. Transport Layer (Layer 4)
+B. Data-Link Layer (Layer 2)
+C. Physical Layer (Layer 1)
+D. Session Layer (Layer 5)
+ANSWER: A
+
+Question 421: What are Access Control Lists (ACLs) fundamentally used for inside network routers?
+A. Filtering traffic by permitting or denying packets based on explicit conditions
+B. Configuring public dynamic IP address translation blocks
+C. Resolving domain names to destination hardware coordinates
+D. Eliminating Layer 2 switching loop configurations
+ANSWER: A
+
+Question 422: A router executing packet filtering inspects and analyzes packets to make drop or forward choices based on ________.
+A. Source IP, destination IP, protocol type, or port parameters
+B. Bridge ID priority values and cumulative root costs
+C. The active local DHCP lease duration timestamp
+D. The current switch MAC table entry index
+ANSWER: A
+
+Question 423: An individual condition statement inside an Access Control List is technically referred to as an ________.
+A. Access Control Entry (ACE)
+B. Access Mask entry
+C. Active Filtering Clause
+D. Administrative Route entry
+ANSWER: A
+
+Question 424: How does a router evaluate a packet against an active Access Control List?
+A. Sequentially from the top statement down, stopping at the first match
+B. Randomly sampling statements until a permit is encountered
+C. Analyzing the bottom statement first and working upwards
+D. Evaluating all matching entries and averaging their metrics
+ANSWER: A
+
+Question 425: What invisible, implicit statement resides at the very bottom of every standard Access Control List?
+A. Implicit deny all traffic statement
+B. Implicit permit all traffic statement
+C. Implicit log and forward instruction
+D. Implicit NAT redirect command
+ANSWER: A
+
+Question 426: If a packet does not match any explicitly configured statement inside an ACL, what is its fate?
+A. It is implicitly denied and dropped by the router
+B. It is forwarded out of every active interface link
+C. It is redirected automatically to the local DHCP server
+D. It is assigned an arbitrary loopback port address
+ANSWER: A
+
+Question 427: What specialized mask type do Access Control Lists implement to determine which address bits to examine or ignore?
+A. Wildcard mask
+B. Subnet mask
+C. Prefix mask
+D. Anycast mask
+ANSWER: A
+
+Question 428: In an ACL wildcard mask, a binary bit value of 0 explicitly signifies what instruction to the router?
+A. Match the corresponding bit value exactly
+B. Ignore the corresponding bit value completely
+C. Invert the bit value before evaluation
+D. Forward the bit value via the OSPF area
+ANSWER: A
+
+Question 429: In an ACL wildcard mask, a binary bit value of 1 explicitly signifies what instruction to the router?
+A. Ignore the corresponding bit value completely
+B. Match the corresponding bit value exactly
+C. Discard the packet immediately
+D. Log the matching event in volatile RAM
+ANSWER: A
+
+Question 430: What is the equivalent wildcard mask for a standard Class C subnet mask of 255.255.255.0?
+A. 0.0.0.255
+B. 255.255.255.0
+C. 0.0.255.255
+D. 0.0.0.0
+ANSWER: A
+
+Question 431: What is the equivalent wildcard mask for a standard Class B subnet mask of 255.255.0.0?
+A. 0.0.255.255
+B. 0.0.0.255
+C. 255.255.0.0
+D. 255.255.255.255
+ANSWER: A
+
+Question 432: What is the equivalent wildcard mask for a standard Class A subnet mask of 255.0.0.0?
+A. 0.255.255.255
+B. 0.0.0.255
+C. 0.0.255.255
+D. 255.0.0.0
+ANSWER: A
+
+Question 433: What specific wildcard mask string is used to match a single, specific host address precisely?
+A. 0.0.0.0
+B. 255.255.255.255
+C. 0.0.0.255
+D. 255.255.0.0
+ANSWER: A
+
+Question 434: What keyword acts as a convenient shorthand replacement for the specific host wildcard mask '0.0.0.0'?
+A. host
+B. any
+C. permit
+D. established
+ANSWER: A
+
+Question 435: What keyword acts as a convenient shorthand replacement for the global wildcard mask '255.255.255.255'?
+A. any
+B. host
+C. all
+D. deny
+ANSWER: A
+
+Question 436: A standard Access Control List filters network traffic based exclusively on which criteria?
+A. Source IP address parameter only
+B. Destination port designation only
+C. Protocol payload type only
+D. Destination MAC hardware coordinates
+ANSWER: A
+
+Question 437: An extended Access Control List filters network traffic based on which combination of elements?
+A. Source and destination IP addresses, protocol type, and port numbers
+B. Source MAC address and switch priority values only
+C. OSPF link state metrics and area indicators
+D. DHCP discover tags and lease timestamps
+ANSWER: A
+
+Question 438: What is the valid numerical range used to identify a Standard IP Access Control List on classic Cisco routers?
+A. 1 to 99
+B. 100 to 199
+C. 1000 to 1999
+D. 200 to 299
+ANSWER: A
+
+Question 439: What is the valid numerical range used to identify an Extended IP Access Control List on standard routers?
+A. 100 to 199
+B. 1 to 99
+C. 900 to 999
+D. 80 to 89
+ANSWER: A
+
+Question 440: What critical step must an administrator perform after creating an ACL to make it actively filter traffic?
+A. Apply the ACL to a specific router interface in an inbound or outbound direction
+B. Reboot the perimeter network gateway router
+C. Clear the entire dynamic switch MAC table
+D. Renew all local active DHCP client dynamic leases
+ANSWER: A
+
+Question 441: The term telecommunication means communication at a ________.
+A. distance
+B. local level
+C. high speed
+D. secure layer
+ANSWER: A
+
+Question 442: Which of the following is NOT an essential component of a data communication system?
+A. Sender
+B. Receiver
+C. Message
+D. Subnet Mask
+ANSWER: D
+
+Question 443: The fundamental characteristic of data communication that refers to the variation in packet arrival time is called ________.
+A. Jitter
+B. Accuracy
+C. Timeliness
+D. Delivery
+ANSWER: A
+
+Question 444: If a data communication system changes data and fails to correct it, the system violates which characteristic?
+A. Accuracy
+B. Timeliness
+C. Delivery
+D. Jitter
+ANSWER: A
+
+Question 445: A network that is a collection of connected computing devices is called a network, while a network of networks is an ________.
+A. internet
+B. intranet
+C. extranet
+D. LAN
+ANSWER: A
+
+Question 446: Which physical topology connects each device with a dedicated point-to-point connection to a central controller?
+A. Star
+B. Bus
+C. Ring
+D. Mesh
+ANSWER: A
+
+Question 447: In a physical mesh topology, how many physical links are needed to connect n devices?
+A. n(n-1)/2
+B. n
+C. n-1
+D. 2n
+ANSWER: A
+
+Question 448: Which topology features a main line connection called a backbone where devices connect via taps?
+A. Bus
+B. Star
+C. Ring
+D. Mesh
+ANSWER: A
+
+Question 449: A significant disadvantage of the traditional Bus topology is that ________.
+A. A break in the backbone stops all transmission
+B. It requires the most cable
+C. It relies entirely on a central switch
+D. It uses point-to-point links
+ANSWER: A
+
+Question 450: In a physical Ring topology, each device incorporates which active component to boost signals?
+A. Repeater
+B. Router
+C. Passive tap
+D. Bridge
+ANSWER: A
+
+Question 451: An organizational private network that is contained strictly within the enterprise is called an ________.
+A. Intranet
+B. Internet
+C. Extranet
+D. WAN
+ANSWER: A
+
+Question 452: When an enterprise allows authorized external entities or customers to access parts of its network, this is called an ________.
+A. Extranet
+B. Intranet
+C. Internet
+D. LAN
+ANSWER: A
+
+Question 453: Which data flow mode allows transmission in both directions, but only one direction at a time?
+A. Half-Duplex
+B. Simplex
+C. Full-Duplex
+D. Unidirectional
+ANSWER: A
+
+Question 454: Television broadcasting is an example of which type of data flow mode?
+A. Simplex
+B. Half-Duplex
+C. Full-Duplex
+D. Bidirectional
+ANSWER: A
+
+Question 455: Which characteristic ensures that a data communication system delivers packets only to the intended user?
+A. Delivery
+B. Accuracy
+C. Timeliness
+D. Jitter
+ANSWER: A
+
+Question 456: The information or data to be communicated in a data communication system is called the ________.
+A. Message
+B. Protocol
+C. Medium
+D. Sender
+ANSWER: A
+
+Question 457: The physical path over which a message travels from sender to receiver is known as the ________.
+A. Transmission Medium
+B. Protocol
+C. Interface
+D. Gateway
+ANSWER: A
+
+Question 458: A set of rules that governs data communication between entities is defined as a ________.
+A. Protocol
+B. Standard
+C. Topology
+D. Medium
+ANSWER: A
+
+Question 459: Which physical topology provides the highest level of redundancy and fault isolation?
+A. Mesh
+B. Bus
+C. Star
+D. Tree
+ANSWER: A
+
+Question 460: What is a major advantage of a Star topology over a Mesh topology?
+A. It requires less cabling and is easier to install
+B. It eliminates the central point of failure
+C. It requires no active hardware
+D. It provides direct dedicated paths between all hosts
+ANSWER: A
+
+Question 461: A Personal Area Network (PAN) typically spans a maximum connectivity range of up to ________.
+A. 10 meters
+B. 100 meters
+C. 1 kilometer
+D. 10 kilometers
+ANSWER: A
+
+Question 462: Which of the following technologies is commonly used to implement a Personal Area Network (PAN)?
+A. Bluetooth
+B. Fiber Optics
+C. Metro Ethernet
+D. OSPF
+ANSWER: A
+
+Question 463: A Local Area Network (LAN) usually connects devices within which type of geographical area?
+A. A room, building, or campus
+B. An entire city
+C. A whole continent
+D. Global endpoints
+ANSWER: A
+
+Question 464: When a network operates primarily on private IP addresses and owned infrastructure, it is a ________.
+A. LAN
+B. MAN
+C. WAN
+D. Internet
+ANSWER: A
+
+Question 465: A Metropolitan Area Network (MAN) generally expands throughout what scope?
+A. A city
+B. A home office
+C. A country
+D. A continent
+ANSWER: A
+
+Question 466: Which of the following technologies is widely utilized for Metropolitan Area Network (MAN) infrastructure?
+A. Fiber optics and Metro Ethernet
+B. Bluetooth
+C. NFC
+D. Dial-up modems
+ANSWER: A
+
+Question 467: A Wide Area Network (WAN) is best characterized by which attribute?
+A. It covers a broad geographical area such as countries or continents
+B. It is limited to a 10-meter radius
+C. It never uses routers
+D. It relies entirely on private local resources
+ANSWER: A
+
+Question 468: Which networking device belongs strictly to only ONE collision domain and copies incoming signals to all ports?
+A. Hub
+B. Switch
+C. Router
+D. Bridge
+ANSWER: A
+
+Question 469: Which layer 2 device separates collision domains on every single port but maintains a single broadcast domain?
+A. Switch
+B. Hub
+C. Repeater
+D. Amplifier
+ANSWER: A
+
+Question 470: Which layer 3 device separates both collision domains and broadcast domains?
+A. Router
+B. Switch
+C. Hub
+D. Repeater
+ANSWER: A
+
+Question 471: What protocol does Ethernet use to manage shared bandwidth and handle simultaneous transmissions?
+A. CSMA/CD
+B. STP
+C. OSPF
+D. ICMP
+ANSWER: A
+
+Question 472: In CSMA/CD, what is the length of the jam signal sent to inform all devices that a collision occurred?
+A. 32 bits
+B. 64 bits
+C. 16 bits
+D. 128 bits
+ANSWER: A
+
+Question 473: What algorithm is invoked by devices on an Ethernet segment immediately after a collision occurs?
+A. Random backoff algorithm
+B. Dijkstra algorithm
+C. Spanning tree algorithm
+D. Bellman-Ford algorithm
+ANSWER: A
+
+Question 474: Why do networks utilize a layered communication architecture?
+A. To reduce complexity by splitting tasks into smaller pieces
+B. To increase propagation delay
+C. To eliminate the need for protocols
+D. To prevent the use of routers
+ANSWER: A
+
+Question 475: In a layered approach, each layer provides services to the layer immediately ________.
+A. above it
+B. below it
+C. across the router
+D. inside the hub
+ANSWER: A
+
+Question 476: A logical area where broadcast frames are received by all devices is known as a ________.
+A. Broadcast domain
+B. Collision domain
+C. Subnet mask
+D. VLAN tag
+ANSWER: A
+
+Question 477: Hubs belong to how many collision domains?
+A. One
+B. Two
+C. As many as the number of ports
+D. Zero
+ANSWER: A
+
+Question 478: If a switch has 24 ports, how many separate collision domains does it create?
+A. 24
+B. 1
+C. 12
+D. 0
+ANSWER: A
+
+Question 479: By default, how many broadcast domains does a standard unconfigured 24-port switch represent?
+A. One
+B. 24
+C. Two
+D. Zero
+ANSWER: A
+
+Question 480: What is the primary function of the jam signal in an Ethernet network running CSMA/CD?
+A. To notify all devices that a collision has occurred
+B. To clear the MAC table
+C. To route packets to the next hop
+D. To renew the DHCP lease
+ANSWER: A
+
+Question 481: The Open Systems Interconnection (OSI) model was created by which international body?
+A. ISO
+B. IEEE
+C. IETF
+D. DoD
+ANSWER: A
+
+Question 482: The OSI model consists of how many distinct layers?
+A. 7
+B. 4
+C. 5
+D. 6
+ANSWER: A
+
+Question 483: Which layers of the OSI model are known as the Upper Layers or User Support Layers?
+A. Application, Presentation, Session
+B. Transport, Network, Data-Link
+C. Network, Data-Link, Physical
+D. Physical, Data-Link, Transport
+ANSWER: A
+
+Question 484: The Upper Layers of the OSI model are primarily implemented in ________.
+A. Software
+B. Hardware
+C. Firmware
+D. Cabling
+ANSWER: A
+
+Question 485: Which OSI layer provides the direct interface between the user application and the network?
+A. Application Layer
+B. Presentation Layer
+C. Session Layer
+D. Transport Layer
+ANSWER: A
+
+Question 486: HTTP, FTP, and SMTP are protocols that operate at which layer of the OSI model?
+A. Application Layer
+B. Presentation Layer
+C. Transport Layer
+D. Network Layer
+ANSWER: A
+
+Question 487: Which OSI layer is responsible for data translation, formatting, encryption, and compression?
+A. Presentation Layer
+B. Session Layer
+C. Application Layer
+D. Transport Layer
+ANSWER: A
+
+Question 488: HTML, XML, GIF, and JPEG are standards associated with which layer of the OSI model?
+A. Presentation Layer
+B. Application Layer
+C. Session Layer
+D. Network Layer
+ANSWER: A
+
+Question 489: Which OSI layer is responsible for establishing, maintaining, and terminating synchronization sessions between devices?
+A. Session Layer
+B. Transport Layer
+C. Presentation Layer
+D. Network Layer
+ANSWER: A
+
+Question 490: The Department of Defense (DoD) model is also commonly known as the ________.
+A. TCP/IP Model
+B. OSI Model
+C. ISO Model
+D. IEEE Model
+ANSWER: A
+
+Question 491: The classic DoD or original TCP/IP model consists of how many layers?
+A. 4
+B. 7
+C. 5
+D. 3
+ANSWER: A
+
+Question 492: Which layer of the OSI model is responsible for end-to-end connection control, flow control, and error recovery?
+A. Transport Layer
+B. Network Layer
+C. Data-Link Layer
+D. Physical Layer
+ANSWER: A
+
+Question 493: What are the two primary protocols operating at the Transport layer of the TCP/IP suite?
+A. TCP and UDP
+B. IP and ICMP
+C. HTTP and FTP
+D. ARP and RARP
+ANSWER: A
+
+Question 494: Which OSI layer is responsible for determining the best logical path to route data across networks?
+A. Network Layer
+B. Data-Link Layer
+C. Physical Layer
+D. Transport Layer
+ANSWER: A
+
+Question 495: IP and ICMP operate at which layer of the OSI reference model?
+A. Network Layer
+B. Transport Layer
+C. Data-Link Layer
+D. Physical Layer
+ANSWER: A
+
+Question 496: As packets travel across networks, logical IP addresses are translated to hardware MAC addresses at which layer?
+A. Data-Link Layer
+B. Network Layer
+C. Physical Layer
+D. Transport Layer
+ANSWER: A
+
+Question 497: The Physical layer handles data transfer across the network medium in the form of raw ________.
+A. bits
+B. packets
+C. frames
+D. segments
+ANSWER: A
+
+Question 498: What is a 16-bit address used to identify specific processes or applications running on a host?
+A. Port address
+B. IP address
+C. MAC address
+D. Hardware address
+ANSWER: A
+
+Question 499: In the mnemonic 'Please Do Not Throw Sausage Pizza Away', the letter 'P' stands for which layer?
+A. Physical
+B. Presentation
+C. Protocol
+D. Port
+ANSWER: A
+
+Question 500: Which type of address changes from hop to hop as a packet traverses intermediate routers?
+A. Physical Address
+B. Logical Address
+C. Port Address
+D. Email Address
+ANSWER: A
+
