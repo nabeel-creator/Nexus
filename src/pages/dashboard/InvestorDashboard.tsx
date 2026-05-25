@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Users, PieChart, Filter, Search, PlusCircle } from 'lucide-react';
+import { Users, Filter, Search, PlusCircle } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { Card, CardBody, CardHeader } from '../../components/ui/Card';
 import { Input } from '../../components/ui/Input';
@@ -8,13 +8,32 @@ import { Badge } from '../../components/ui/Badge';
 import { EntrepreneurCard } from '../../components/entrepreneur/EntrepreneurCard';
 import { useAuth } from '../../context/AuthContext';
 import { Entrepreneur } from '../../types';
-import { entrepreneurs } from '../../data/users';
 import { getRequestsFromInvestor } from '../../data/collaborationRequests';
 
 export const InvestorDashboard: React.FC = () => {
   const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedIndustries, setSelectedIndustries] = useState<string[]>([]);
+  const [entrepreneurs, setEntrepreneurs] = useState<Entrepreneur[]>([]);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    const fetchEntrepreneurs = async () => {
+      try {
+        const response = await fetch('/api/users/entrepreneurs');
+        if (response.ok) {
+          const data = await response.json();
+          setEntrepreneurs(data);
+        }
+      } catch (error) {
+        console.error('Error fetching entrepreneurs:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchEntrepreneurs();
+  }, []);
   
   if (!user) return null;
   
@@ -49,6 +68,14 @@ export const InvestorDashboard: React.FC = () => {
         : [...prevSelected, industry]
     );
   };
+  
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p className="text-gray-500">Loading startups...</p>
+      </div>
+    );
+  }
   
   return (
     <div className="space-y-6 animate-fade-in">

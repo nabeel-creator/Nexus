@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { MessageCircle, Building2, MapPin, UserCircle, BarChart3, Briefcase } from 'lucide-react';
 import { Avatar } from '../../components/ui/Avatar';
@@ -6,15 +6,38 @@ import { Button } from '../../components/ui/Button';
 import { Card, CardBody, CardHeader } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 import { useAuth } from '../../context/AuthContext';
-import { findUserById } from '../../data/users';
-import { Investor } from '../../types';
 
 export const InvestorProfile: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { user: currentUser } = useAuth();
   
-  // Fetch investor data
-  const investor = findUserById(id || '') as Investor | null;
+  const [investor, setInvestor] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const response = await fetch(`/api/users/profile/${id}`);
+        if (response.ok) {
+          const data = await response.json();
+          // Ensure arrays exist for map functions below
+          data.investmentStage = data.investmentStage || ['Seed', 'Series A'];
+          data.investmentInterests = data.investmentInterests || ['Technology'];
+          data.portfolioCompanies = data.portfolioCompanies || [];
+          setInvestor(data);
+        }
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    if (id) fetchProfile();
+  }, [id]);
+
+  if (loading) {
+    return <div className="text-center py-12">Loading profile...</div>;
+  }
   
   if (!investor || investor.role !== 'investor') {
     return (
@@ -52,10 +75,12 @@ export const InvestorProfile: React.FC = () => {
               </p>
               
               <div className="flex flex-wrap gap-2 justify-center sm:justify-start mt-3">
-                <Badge variant="primary">
-                  <MapPin size={14} className="mr-1" />
-                  San Francisco, CA
-                </Badge>
+                {investor.location && (
+                  <Badge variant="primary">
+                    <MapPin size={14} className="mr-1" />
+                    {investor.location}
+                  </Badge>
+                )}
                 {investor.investmentStage.map((stage, index) => (
                   <Badge key={index} variant="secondary" size="sm">{stage}</Badge>
                 ))}
@@ -124,27 +149,7 @@ export const InvestorProfile: React.FC = () => {
                   </div>
                 </div>
                 
-                <div>
-                  <h3 className="text-md font-medium text-gray-900">Investment Criteria</h3>
-                  <ul className="mt-2 space-y-2 text-gray-700">
-                    <li className="flex items-start">
-                      <span className="inline-block w-2 h-2 bg-primary-600 rounded-full mt-1.5 mr-2"></span>
-                      Strong founding team with domain expertise
-                    </li>
-                    <li className="flex items-start">
-                      <span className="inline-block w-2 h-2 bg-primary-600 rounded-full mt-1.5 mr-2"></span>
-                      Clear market opportunity and product-market fit
-                    </li>
-                    <li className="flex items-start">
-                      <span className="inline-block w-2 h-2 bg-primary-600 rounded-full mt-1.5 mr-2"></span>
-                      Scalable business model with strong unit economics
-                    </li>
-                    <li className="flex items-start">
-                      <span className="inline-block w-2 h-2 bg-primary-600 rounded-full mt-1.5 mr-2"></span>
-                      Potential for significant growth and market impact
-                    </li>
-                  </ul>
-                </div>
+
               </div>
             </CardBody>
           </Card>
@@ -194,34 +199,6 @@ export const InvestorProfile: React.FC = () => {
                   <p className="text-md font-medium text-gray-900">{investor.totalInvestments} companies</p>
                 </div>
                 
-                <div>
-                  <span className="text-sm text-gray-500">Typical Investment Timeline</span>
-                  <p className="text-md font-medium text-gray-900">3-5 years</p>
-                </div>
-                
-                <div className="pt-3 border-t border-gray-100">
-                  <span className="text-sm text-gray-500">Investment Focus</span>
-                  <div className="mt-2 space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs font-medium">SaaS & B2B</span>
-                      <div className="w-32 bg-gray-200 rounded-full h-2">
-                        <div className="bg-primary-600 h-2 rounded-full" style={{ width: '75%' }}></div>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs font-medium">FinTech</span>
-                      <div className="w-32 bg-gray-200 rounded-full h-2">
-                        <div className="bg-primary-600 h-2 rounded-full" style={{ width: '60%' }}></div>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs font-medium">HealthTech</span>
-                      <div className="w-32 bg-gray-200 rounded-full h-2">
-                        <div className="bg-primary-600 h-2 rounded-full" style={{ width: '40%' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </CardBody>
           </Card>

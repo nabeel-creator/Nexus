@@ -1,27 +1,55 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search, Filter, MapPin } from 'lucide-react';
 import { Input } from '../../components/ui/Input';
 import { Card, CardHeader, CardBody } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 import { InvestorCard } from '../../components/investor/InvestorCard';
-import { investors } from '../../data/users';
 
 export const InvestorsPage: React.FC = () => {
+  const [investors, setInvestors] = useState<any[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedStages, setSelectedStages] = useState<string[]>([]);
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchInvestors = async () => {
+      try {
+        const response = await fetch('/api/users?role=investor');
+        if (response.ok) {
+          const data = await response.json();
+          setInvestors(data.map((investor: any) => ({
+            ...investor,
+            investmentStage: investor.investmentStage || [],
+            investmentInterests: investor.investmentInterests || [],
+            portfolioCompanies: investor.portfolioCompanies || [],
+            totalInvestments: investor.totalInvestments || 0,
+            minimumInvestment: investor.minimumInvestment || '$0',
+            maximumInvestment: investor.maximumInvestment || '$0'
+          })));
+        }
+      } catch (error) {
+        console.error('Failed to load investors', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchInvestors();
+  }, []);
   
   // Get unique investment stages and interests
-  const allStages = Array.from(new Set(investors.flatMap(i => i.investmentStage)));
-  const allInterests = Array.from(new Set(investors.flatMap(i => i.investmentInterests)));
+  const allStages = Array.from(new Set(investors.flatMap(i => i.investmentStage || [])));
+  const allInterests = Array.from(new Set(investors.flatMap(i => i.investmentInterests || [])));
   
   // Filter investors based on search and filters
   const filteredInvestors = investors.filter(investor => {
+    const searchTerm = searchQuery.toLowerCase();
     const matchesSearch = searchQuery === '' || 
-      investor.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      investor.bio.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      investor.investmentInterests.some(interest => 
-        interest.toLowerCase().includes(searchQuery.toLowerCase())
+      investor.name.toLowerCase().includes(searchTerm) ||
+      (investor.bio || '').toLowerCase().includes(searchTerm) ||
+      (investor.investmentInterests || []).some((interest: string) => 
+        interest.toLowerCase().includes(searchTerm)
       );
     
     const matchesStages = selectedStages.length === 0 ||
@@ -55,6 +83,11 @@ export const InvestorsPage: React.FC = () => {
         <h1 className="text-2xl font-bold text-gray-900">Find Investors</h1>
         <p className="text-gray-600">Connect with investors who match your startup's needs</p>
       </div>
+      {isLoading && (
+        <div className="rounded-lg border border-dashed border-gray-300 p-8 text-center text-gray-500">
+          Loading registered investors...
+        </div>
+      )}
       
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Filters sidebar */}
@@ -146,6 +179,9 @@ export const InvestorsPage: React.FC = () => {
                 investor={investor}
               />
             ))}
+          {filteredInvestors.length === 0 && !isLoading && (
+            <div className="text-center text-gray-500 py-10">No investors match your search or filters.</div>
+          )}
           </div>
         </div>
       </div>

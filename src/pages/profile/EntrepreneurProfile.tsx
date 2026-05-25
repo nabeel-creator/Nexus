@@ -1,21 +1,58 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { MessageCircle, Users, Calendar, Building2, MapPin, UserCircle, FileText, DollarSign, Send } from 'lucide-react';
+import { MessageCircle, Building2, MapPin, UserCircle, FileText, DollarSign, Send, Calendar, Users } from 'lucide-react';
 import { Avatar } from '../../components/ui/Avatar';
 import { Button } from '../../components/ui/Button';
 import { Card, CardBody, CardHeader } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 import { useAuth } from '../../context/AuthContext';
-import { findUserById } from '../../data/users';
-import { createCollaborationRequest, getRequestsFromInvestor } from '../../data/collaborationRequests';
-import { Entrepreneur } from '../../types';
+import { sendCollaborationRequest, fetchSentCollaborationRequests } from '../../services/collaborationService';
 
 export const EntrepreneurProfile: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { user: currentUser } = useAuth();
   
-  // Fetch entrepreneur data
-  const entrepreneur = findUserById(id || '') as Entrepreneur | null;
+  const [entrepreneur, setEntrepreneur] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [hasRequestedCollaboration, setHasRequestedCollaboration] = useState(false);
+  const [sendingRequest, setSendingRequest] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const response = await fetch(`/api/users/profile/${id}`);
+        if (response.ok) {
+          const data = await response.json();
+          setEntrepreneur(data);
+        }
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    if (id) fetchProfile();
+  }, [id]);
+
+  useEffect(() => {
+    const checkExistingRequest = async () => {
+      if (currentUser?.role === 'investor' && id) {
+        try {
+          const requests = await fetchSentCollaborationRequests();
+          const hasRequest = requests.some(req => req.entrepreneurId === id);
+          setHasRequestedCollaboration(hasRequest);
+        } catch (err) {
+          console.error('Error checking requests:', err);
+        }
+      }
+    };
+    checkExistingRequest();
+  }, [currentUser, id]);
+
+  if (loading) {
+    return <div className="text-center py-12">Loading profile...</div>;
+  }
   
   if (!entrepreneur || entrepreneur.role !== 'entrepreneur') {
     return (
@@ -32,22 +69,22 @@ export const EntrepreneurProfile: React.FC = () => {
   const isCurrentUser = currentUser?.id === entrepreneur.id;
   const isInvestor = currentUser?.role === 'investor';
   
-  // Check if the current investor has already sent a request to this entrepreneur
-  const hasRequestedCollaboration = isInvestor && id 
-    ? getRequestsFromInvestor(currentUser.id).some(req => req.entrepreneurId === id)
-    : false;
-  
-  const handleSendRequest = () => {
-    if (isInvestor && currentUser && id) {
-      createCollaborationRequest(
-        currentUser.id,
+  const handleSendRequest = async () => {
+    if (!isInvestor || !currentUser || !id) return;
+    
+    setSendingRequest(true);
+    setError(null);
+    
+    try {
+      await sendCollaborationRequest(
         id,
         `I'm interested in learning more about ${entrepreneur.startupName} and would like to explore potential investment opportunities.`
       );
-      
-      // In a real app, we would refresh the data or update state
-      // For this demo, we'll force a page reload
-      window.location.reload();
+      setHasRequestedCollaboration(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to send request');
+    } finally {
+      setSendingRequest(false);
     }
   };
   
@@ -91,6 +128,11 @@ export const EntrepreneurProfile: React.FC = () => {
           </div>
           
           <div className="mt-6 sm:mt-0 flex flex-col sm:flex-row gap-2 justify-center sm:justify-end">
+            {error && (
+              <div className="text-sm text-red-600 mb-2">
+                {error}
+              </div>
+            )}
             {!isCurrentUser && (
               <>
                 <Link to={`/chat/${entrepreneur.id}`}>
@@ -105,10 +147,10 @@ export const EntrepreneurProfile: React.FC = () => {
                 {isInvestor && (
                   <Button
                     leftIcon={<Send size={18} />}
-                    disabled={hasRequestedCollaboration}
+                    disabled={hasRequestedCollaboration || sendingRequest}
                     onClick={handleSendRequest}
                   >
-                    {hasRequestedCollaboration ? 'Request Sent' : 'Request Collaboration'}
+                    {sendingRequest ? 'Sending...' : hasRequestedCollaboration ? 'Request Sent' : 'Request Collaboration'}
                   </Button>
                 )}
               </>
@@ -159,20 +201,6 @@ export const EntrepreneurProfile: React.FC = () => {
                     {entrepreneur.pitchSummary}
                   </p>
                 </div>
-                
-                <div>
-                  <h3 className="text-md font-medium text-gray-900">Market Opportunity</h3>
-                  <p className="text-gray-700 mt-1">
-                    The {entrepreneur.industry} market is experiencing significant growth, with a projected CAGR of 14.5% through 2027. Our solution addresses key pain points in this expanding market.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-md font-medium text-gray-900">Competitive Advantage</h3>
-                  <p className="text-gray-700 mt-1">
-                    Unlike our competitors, we offer a unique approach that combines innovative technology with deep industry expertise, resulting in superior outcomes for our customers.
-                  </p>
-                </div>
               </div>
             </CardBody>
           </Card>
@@ -198,35 +226,9 @@ export const EntrepreneurProfile: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center p-3 border border-gray-200 rounded-md">
-                  <Avatar
-                    src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg"
-                    alt="Team Member"
-                    size="md"
-                    className="mr-3"
-                  />
-                  <div>
-                    <h3 className="text-sm font-medium text-gray-900">Alex Johnson</h3>
-                    <p className="text-xs text-gray-500">CTO</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center p-3 border border-gray-200 rounded-md">
-                  <Avatar
-                    src="https://images.pexels.com/photos/773371/pexels-photo-773371.jpeg"
-                    alt="Team Member"
-                    size="md"
-                    className="mr-3"
-                  />
-                  <div>
-                    <h3 className="text-sm font-medium text-gray-900">Jessica Chen</h3>
-                    <p className="text-xs text-gray-500">Head of Product</p>
-                  </div>
-                </div>
-                
-                {entrepreneur.teamSize > 3 && (
+                {entrepreneur.teamSize > 1 && (
                   <div className="flex items-center justify-center p-3 border border-dashed border-gray-200 rounded-md">
-                    <p className="text-sm text-gray-500">+ {entrepreneur.teamSize - 3} more team members</p>
+                    <p className="text-sm text-gray-500">+ {entrepreneur.teamSize - 1} more team members</p>
                   </div>
                 )}
               </div>
@@ -250,34 +252,6 @@ export const EntrepreneurProfile: React.FC = () => {
                     <p className="text-lg font-semibold text-gray-900">{entrepreneur.fundingNeeded}</p>
                   </div>
                 </div>
-                
-                <div>
-                  <span className="text-sm text-gray-500">Valuation</span>
-                  <p className="text-md font-medium text-gray-900">$8M - $12M</p>
-                </div>
-                
-                <div>
-                  <span className="text-sm text-gray-500">Previous Funding</span>
-                  <p className="text-md font-medium text-gray-900">$750K Seed (2022)</p>
-                </div>
-                
-                <div className="pt-3 border-t border-gray-100">
-                  <span className="text-sm text-gray-500">Funding Timeline</span>
-                  <div className="mt-2 space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs font-medium">Pre-seed</span>
-                      <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">Completed</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs font-medium">Seed</span>
-                      <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">Completed</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs font-medium">Series A</span>
-                      <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full">In Progress</span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </CardBody>
           </Card>
@@ -289,38 +263,11 @@ export const EntrepreneurProfile: React.FC = () => {
             </CardHeader>
             <CardBody>
               <div className="space-y-3">
-                <div className="flex items-center p-3 border border-gray-200 rounded-md hover:bg-gray-50 transition-colors">
-                  <div className="p-2 bg-primary-50 rounded-md mr-3">
-                    <FileText size={18} className="text-primary-700" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-sm font-medium text-gray-900">Pitch Deck</h3>
-                    <p className="text-xs text-gray-500">Updated 2 months ago</p>
-                  </div>
-                  <Button variant="outline" size="sm">View</Button>
-                </div>
-                
-                <div className="flex items-center p-3 border border-gray-200 rounded-md hover:bg-gray-50 transition-colors">
-                  <div className="p-2 bg-primary-50 rounded-md mr-3">
-                    <FileText size={18} className="text-primary-700" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-sm font-medium text-gray-900">Business Plan</h3>
-                    <p className="text-xs text-gray-500">Updated 1 month ago</p>
-                  </div>
-                  <Button variant="outline" size="sm">View</Button>
-                </div>
-                
-                <div className="flex items-center p-3 border border-gray-200 rounded-md hover:bg-gray-50 transition-colors">
-                  <div className="p-2 bg-primary-50 rounded-md mr-3">
-                    <FileText size={18} className="text-primary-700" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-sm font-medium text-gray-900">Financial Projections</h3>
-                    <p className="text-xs text-gray-500">Updated 2 weeks ago</p>
-                  </div>
-                  <Button variant="outline" size="sm">View</Button>
-                </div>
+                <p className="text-sm text-gray-500">
+                  {isCurrentUser 
+                    ? 'Upload documents like your pitch deck, business plan, and financial projections.' 
+                    : 'Request access to documents and financials by sending a collaboration request.'}
+                </p>
               </div>
               
               {!isCurrentUser && isInvestor && (

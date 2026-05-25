@@ -3,6 +3,8 @@ import { User, UserRole, AuthContextType } from '../types';
 import { users } from '../data/users';
 import toast from 'react-hot-toast';
 
+const isValidObjectId = (id: string) => /^[a-fA-F0-9]{24}$/.test(id);
+
 // Create Auth Context
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -19,28 +21,42 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     const storedUser = localStorage.getItem(USER_STORAGE_KEY);
     if (storedUser) {
-      setUser(JSON.parse(storedUser));
+      try {
+        const parsedUser: User = JSON.parse(storedUser);
+        if (parsedUser?.id && isValidObjectId(parsedUser.id)) {
+          setUser(parsedUser);
+        } else {
+          localStorage.removeItem(USER_STORAGE_KEY);
+          localStorage.removeItem('business_nexus_token');
+        }
+      } catch {
+        localStorage.removeItem(USER_STORAGE_KEY);
+        localStorage.removeItem('business_nexus_token');
+      }
     }
     setIsLoading(false);
   }, []);
 
-  // Mock login function - in a real app, this would make an API call
+  // Login function with real backend API call
   const login = async (email: string, password: string, role: UserRole): Promise<void> => {
     setIsLoading(true);
     
     try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Find user with matching email and role
-      const foundUser = users.find(u => u.email === email && u.role === role);
-      
-      if (foundUser) {
-        setUser(foundUser);
-        localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(foundUser));
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password, role }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setUser(data.user);
+        localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(data.user));
+        localStorage.setItem('business_nexus_token', data.token); // Store JWT token
         toast.success('Successfully logged in!');
       } else {
-        throw new Error('Invalid credentials or user not found');
+        throw new Error(data.message || 'Invalid credentials or user not found');
       }
     } catch (error) {
       toast.error((error as Error).message);
@@ -50,37 +66,45 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
-  // Mock register function - in a real app, this would make an API call
+  // Register function with real backend API call
   const register = async (name: string, email: string, password: string, role: UserRole): Promise<void> => {
     setIsLoading(true);
     
     try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Check if email already exists
-      if (users.some(u => u.email === email)) {
-        throw new Error('Email already in use');
+      // Split name into first and last name for our basic schema
+      const nameParts = name.split(' ');
+      const firstName = nameParts[0];
+      const lastName = nameParts.slice(1).join(' ');
+      const username = name.replace(/\s+/g, '').toLowerCase() + Math.floor(Math.random() * 100);
+
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, username, firstName, lastName, password, role }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // We received the newly created user from backend
+        const newUser: User = {
+          id: data.user.id,
+          name: `${data.user.firstName || ''} ${data.user.lastName || ''}`.trim() || data.user.username,
+          email: data.user.email,
+          role: data.user.role as UserRole,
+          avatarUrl: `https://ui-avatars.com/api/?name=${encodeURIComponent(data.user.username)}&background=random`,
+          bio: '',
+          isOnline: true,
+          createdAt: new Date().toISOString()
+        };
+        
+        setUser(newUser);
+        localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(newUser));
+        localStorage.setItem('business_nexus_token', data.token); // Store JWT token
+        toast.success('Account created successfully!');
+      } else {
+        throw new Error(data.message || 'Error registering user');
       }
-      
-      // Create new user
-      const newUser: User = {
-        id: `${role[0]}${users.length + 1}`,
-        name,
-        email,
-        role,
-        avatarUrl: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random`,
-        bio: '',
-        isOnline: true,
-        createdAt: new Date().toISOString()
-      };
-      
-      // Add user to mock data
-      users.push(newUser);
-      
-      setUser(newUser);
-      localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(newUser));
-      toast.success('Account created successfully!');
     } catch (error) {
       toast.error((error as Error).message);
       throw error;
@@ -138,34 +162,43 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const logout = (): void => {
     setUser(null);
     localStorage.removeItem(USER_STORAGE_KEY);
+    localStorage.removeItem('business_nexus_token');
     toast.success('Logged out successfully');
   };
 
   // Update user profile
-  const updateProfile = async (userId: string, updates: Partial<User>): Promise<void> => {
+  const updateProfile = async (userId: string, updates: Record<string, any>): Promise<void> => {
+    setIsLoading(true);
     try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Update user in mock data
-      const userIndex = users.findIndex(u => u.id === userId);
-      if (userIndex === -1) {
-        throw new Error('User not found');
+      const response = await fetch(`/api/users/profile/${userId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updates),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.message || 'Failed to update profile');
       }
-      
-      const updatedUser = { ...users[userIndex], ...updates };
-      users[userIndex] = updatedUser;
-      
-      // Update current user if it's the same user
+
+      const updatedUser = {
+        ...user,
+        ...updates,
+        ...data.user,
+        name: `${data.user.firstName || ''} ${data.user.lastName || ''}`.trim() || user?.name || '',
+      } as User;
+
       if (user?.id === userId) {
         setUser(updatedUser);
         localStorage.setItem(USER_STORAGE_KEY, JSON.stringify(updatedUser));
       }
-      
+
       toast.success('Profile updated successfully');
     } catch (error) {
       toast.error((error as Error).message);
       throw error;
+    } finally {
+      setIsLoading(false);
     }
   };
 

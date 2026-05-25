@@ -4,7 +4,6 @@ import { formatDistanceToNow } from 'date-fns';
 import { ChatConversation } from '../../types';
 import { Avatar } from '../ui/Avatar';
 import { Badge } from '../ui/Badge';
-import { findUserById } from '../../data/users';
 import { useAuth } from '../../context/AuthContext';
 
 interface ChatUserListProps {
@@ -30,16 +29,13 @@ export const ChatUserList: React.FC<ChatUserListProps> = ({ conversations }) => 
         <div className="space-y-1">
           {conversations.length > 0 ? (
             conversations.map(conversation => {
-              // Get the other participant (not the current user)
-              const otherParticipantId = conversation.participants.find(id => id !== currentUser.id);
-              if (!otherParticipantId) return null;
-              
-              const otherUser = findUserById(otherParticipantId);
-              if (!otherUser) return null;
-              
+              const otherUser = conversation.partner;
               const lastMessage = conversation.lastMessage;
-              const isActive = activeUserId === otherParticipantId;
-              
+              const partnerId = otherUser?.id;
+              const isActive = activeUserId === partnerId;
+
+              if (!otherUser) return null;
+
               return (
                 <div
                   key={conversation.id}

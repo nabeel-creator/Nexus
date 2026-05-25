@@ -1,66 +1,89 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
-import { Send, Phone, Video, Info, Smile } from 'lucide-react';
+import { Send, Phone, Video, Info, Smile, MessageCircle } from 'lucide-react';
 import { Avatar } from '../../components/ui/Avatar';
 import { Button } from '../../components/ui/Button';
 import { Input } from '../../components/ui/Input';
 import { ChatMessage } from '../../components/chat/ChatMessage';
 import { ChatUserList } from '../../components/chat/ChatUserList';
 import { useAuth } from '../../context/AuthContext';
-import { Message } from '../../types';
-import { findUserById } from '../../data/users';
-import { getMessagesBetweenUsers, sendMessage, getConversationsForUser } from '../../data/messages';
-import { MessageCircle } from 'lucide-react';
+import { Message, User, ChatConversation } from '../../types';
+import {
+  fetchChatConversations,
+  fetchChatMessages,
+  fetchUserProfile,
+  sendChatMessage
+} from '../../services/chatService';
 
 export const ChatPage: React.FC = () => {
   const { userId } = useParams<{ userId: string }>();
   const { user: currentUser } = useAuth();
   const [messages, setMessages] = useState<Message[]>([]);
   const [newMessage, setNewMessage] = useState('');
-  const [conversations, setConversations] = useState<any[]>([]);
+  const [conversations, setConversations] = useState<Array<ChatConversation & { partner: User }>>([]);
+  const [chatPartner, setChatPartner] = useState<User | null>(null);
+  const [loadingMessages, setLoadingMessages] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const messagesEndRef = useRef<null | HTMLDivElement>(null);
-  
-  const chatPartner = userId ? findUserById(userId) : null;
-  
+
   useEffect(() => {
-    // Load conversations
-    if (currentUser) {
-      setConversations(getConversationsForUser(currentUser.id));
-    }
+    if (!currentUser) return;
+
+    fetchChatConversations()
+      .then(setConversations)
+      .catch(err => {
+        console.error(err);
+        setError('Unable to load conversations');
+      });
   }, [currentUser]);
-  
+
   useEffect(() => {
-    // Load messages between users
-    if (currentUser && userId) {
-      setMessages(getMessagesBetweenUsers(currentUser.id, userId));
+    if (!currentUser || !userId) {
+      setMessages([]);
+      setChatPartner(null);
+      return;
     }
+
+    setLoadingMessages(true);
+    setError(null);
+
+    Promise.all([fetchUserProfile(userId), fetchChatMessages(userId)])
+      .then(([partner, messages]) => {
+        setChatPartner(partner);
+        setMessages(messages);
+      })
+      .catch(err => {
+        console.error(err);
+        setError('Unable to load chat');
+      })
+      .finally(() => {
+        setLoadingMessages(false);
+      });
   }, [currentUser, userId]);
-  
+
   useEffect(() => {
-    // Scroll to bottom of messages
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
-  
-  const handleSendMessage = (e: React.FormEvent) => {
+
+  const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!newMessage.trim() || !currentUser || !userId) return;
-    
-    const message = sendMessage({
-      senderId: currentUser.id,
-      receiverId: userId,
-      content: newMessage
-    });
-    
-    setMessages([...messages, message]);
-    setNewMessage('');
-    
-    // Update conversations
-    setConversations(getConversationsForUser(currentUser.id));
+
+    try {
+      const message = await sendChatMessage(userId, newMessage.trim());
+      setMessages(prev => [...prev, message]);
+      setNewMessage('');
+      const updatedConversations = await fetchChatConversations();
+      setConversations(updatedConversations);
+    } catch (err) {
+      console.error(err);
+      setError('Unable to send message');
+    }
   };
-  
+
   if (!currentUser) return null;
-  
+
   return (
     <div className="flex h-[calc(100vh-4rem)] bg-white border border-gray-200 rounded-lg overflow-hidden animate-fade-in">
       {/* Conversations sidebar */}
@@ -70,6 +93,12 @@ export const ChatPage: React.FC = () => {
       
       {/* Main chat area */}
       <div className="flex-1 flex flex-col">
+        {error && (
+          <div className="bg-red-50 text-red-700 px-4 py-2 text-sm border-b border-red-100">
+            {error}
+          </div>
+        )}
+
         {/* Chat header */}
         {chatPartner ? (
           <>
@@ -123,7 +152,9 @@ export const ChatPage: React.FC = () => {
             
             {/* Messages container */}
             <div className="flex-1 p-4 overflow-y-auto bg-gray-50">
-              {messages.length > 0 ? (
+              {loadingMessages ? (
+                <div className="h-full flex items-center justify-center text-sm text-gray-500">Loading messages...</div>
+              ) : messages.length > 0 ? (
                 <div className="space-y-4">
                   {messages.map(message => (
                     <ChatMessage

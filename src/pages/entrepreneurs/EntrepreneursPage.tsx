@@ -1,27 +1,55 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search, Filter, MapPin } from 'lucide-react';
 import { Input } from '../../components/ui/Input';
 import { Card, CardHeader, CardBody } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 import { EntrepreneurCard } from '../../components/entrepreneur/EntrepreneurCard';
-import { entrepreneurs } from '../../data/users';
 
 export const EntrepreneursPage: React.FC = () => {
+  const [entrepreneurs, setEntrepreneurs] = useState<any[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedIndustries, setSelectedIndustries] = useState<string[]>([]);
   const [selectedFundingRange, setSelectedFundingRange] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    const fetchEntrepreneurs = async () => {
+      try {
+        const response = await fetch('/api/users?role=entrepreneur');
+        if (response.ok) {
+          const data = await response.json();
+          setEntrepreneurs(data.map((entrepreneur: any) => ({
+            ...entrepreneur,
+            fundingNeeded: entrepreneur.fundingNeeded || '$0',
+            industry: entrepreneur.industry || 'General',
+            location: entrepreneur.location || 'Unknown',
+            teamSize: entrepreneur.teamSize || 1,
+            foundedYear: entrepreneur.foundedYear || 2024,
+            pitchSummary: entrepreneur.pitchSummary || ''
+          })));
+        }
+      } catch (error) {
+        console.error('Failed to load entrepreneurs', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchEntrepreneurs();
+  }, []);
   
   // Get unique industries and funding ranges
-  const allIndustries = Array.from(new Set(entrepreneurs.map(e => e.industry)));
+  const allIndustries = Array.from(new Set(entrepreneurs.map(e => e.industry || ''))).filter(Boolean);
   const fundingRanges = ['< $500K', '$500K - $1M', '$1M - $5M', '> $5M'];
   
   // Filter entrepreneurs based on search and filters
   const filteredEntrepreneurs = entrepreneurs.filter(entrepreneur => {
+    const searchTerm = searchQuery.toLowerCase();
     const matchesSearch = searchQuery === '' || 
-      entrepreneur.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      entrepreneur.startupName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      entrepreneur.industry.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      entrepreneur.pitchSummary.toLowerCase().includes(searchQuery.toLowerCase());
+      entrepreneur.name.toLowerCase().includes(searchTerm) ||
+      entrepreneur.startupName.toLowerCase().includes(searchTerm) ||
+      entrepreneur.industry.toLowerCase().includes(searchTerm) ||
+      entrepreneur.pitchSummary.toLowerCase().includes(searchTerm);
     
     const matchesIndustry = selectedIndustries.length === 0 ||
       selectedIndustries.includes(entrepreneur.industry);
@@ -64,6 +92,11 @@ export const EntrepreneursPage: React.FC = () => {
         <h1 className="text-2xl font-bold text-gray-900">Find Startups</h1>
         <p className="text-gray-600">Discover promising startups looking for investment</p>
       </div>
+      {isLoading && (
+        <div className="rounded-lg border border-dashed border-gray-300 p-8 text-center text-gray-500">
+          Loading registered startups...
+        </div>
+      )}
       
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Filters sidebar */}
@@ -158,6 +191,9 @@ export const EntrepreneursPage: React.FC = () => {
                 entrepreneur={entrepreneur}
               />
             ))}
+            {filteredEntrepreneurs.length === 0 && !isLoading && (
+              <div className="text-center text-gray-500 py-10">No startups match your search or filters.</div>
+            )}
           </div>
         </div>
       </div>
